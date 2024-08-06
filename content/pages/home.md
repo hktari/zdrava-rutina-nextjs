@@ -1,6 +1,12 @@
 ---
 title: Tina Cloud Starter
 blocks:
+  - bannerImages:
+      - src: /uploads/sea-bend-backward.jpeg
+        alt: woman bending backwards. At sea
+      - src: /uploads/hatha-joga.jpg
+        alt: woman sitting cross-legged
+    _template: banner
   - headline: Welcome to the Tina Starter
     text: >
       ## **Editors**
