@@ -2,8 +2,9 @@
 title: Tina Cloud Starter
 blocks:
   - bannerImages:
-      - src: /uploads/hatha-joga.jpg
-        alt: hatha joga
+      - {}
+      - src: /uploads/sea-bend-backward.jpeg
+        alt: bend backwards
     _template: banner
   - headline: Welcome to the Tina Starter
     text: >

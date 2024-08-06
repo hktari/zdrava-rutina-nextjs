@@ -7,6 +7,7 @@ import Image from "next/image";
 import { Section } from "../layout/section";
 import { Container } from "../layout/container";
 import MyCarousel from "../carousel";
+import BootstrapCarousel from "../carousel/bootstrap";
 
 type Props = {};
 
@@ -17,7 +18,8 @@ const BannerBlock = ({ data }: { data: PageBlocksBanner }) => {
         {data.bannerImages && (
           <div data-tina-field={tinaField(data, "bannerImages")}>
             {" "}
-            <MyCarousel images={data.bannerImages} />
+            {/* <MyCarousel images={data.bannerImages} /> */}
+            <BootstrapCarousel images={data.bannerImages} />
           </div>
         )}
       </Container>
