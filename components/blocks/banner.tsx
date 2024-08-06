@@ -6,17 +6,20 @@ import { PageBlocksBanner } from "../../tina/__generated__/types";
 import Image from "next/image";
 import { Section } from "../layout/section";
 import { Container } from "../layout/container";
+import MyCarousel from "../carousel";
 
 type Props = {};
 
 const BannerBlock = ({ data }: { data: PageBlocksBanner }) => {
   return (
     <Section>
-      <Container
-        size="large"
-        className="grid grid-cols-1 md:grid-cols-5 gap-14 items-start justify-center"
-      >
-        <div>{JSON.stringify(data, null, 4)}</div>
+      <Container className="">
+        {data.bannerImages && (
+          <div data-tina-field={tinaField(data, "bannerImages")}>
+            {" "}
+            <MyCarousel images={data.bannerImages} />
+          </div>
+        )}
       </Container>
     </Section>
   );
