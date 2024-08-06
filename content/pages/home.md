@@ -1,30 +1,28 @@
 ---
-title: Tina Cloud Starter
+title: Zdrava Rutina
 blocks:
-  - headline: Welcome to the Tina Starter
+  - headline: Zdrava Rutina
     text: >
-      ## **Editors**
+      # O meni
 
 
-      **Click this box to start editing it**. You will see the matching field
-      appear in the left sidebar for you to make changes. The edits will show in
-      this live preview. In that left panel, you can also navigate around the
-      page to change what you are editing (or just click a component here in the
-      preview, like you did before).
-
-
-      **Clicking 'Save' won't do anything in this demo** - but on your site it
-      will save the changes immediately or send an approval request to your team
-      for review.
-    text2: >
-      ## Developers
-
-
-      This project is set up to show you the basics of working with Tina. You're
-      looking at the landing page, which pulls content from
-      `content/pages/home.md`, components from components/blocks, and puts them
-      all together in `pages/[filename].tsx`, all based on a config
-      `tina/config.tsx`.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta   
+      blanditiis delectus aliquam veritatis? Beatae ducimus dolore labore, ad   
+      optio quo sed soluta repellendus saepe velit aperiam ex hic neque,   
+      perspiciatis vel maiores iure molestias quis harum corporis praesentium   
+      minus fugit. Fugit veniam ad nisi, cumque sed eaque illum accusantium   
+      quibusdam iusto nulla minima cupiditate velit aperiam, dolores suscipit
+      vel    odio repudiandae fuga culpa eum sunt. Sequi incidunt ratione nam
+      quaerat    maxime aperiam a aliquid, et dolore quo impedit, quod ad eaque
+      porro    accusantium nostrum laboriosam corporis quam laborum. Porro quod
+      odit    voluptates dolor provident autem vero in quam laboriosam! Ex,
+      illum libero?    Ipsam, consequatur nobis quo nisi explicabo labore
+      veritatis ex quidem dicta    beatae fugiat atque eveniet unde dolore saepe
+      quia iusto ut, dignissimos    reiciendis maxime ab! Nobis error et
+      officiis. Esse earum adipisci minima,    sint rerum, explicabo molestias
+      expedita suscipit officiis ipsa deleniti,    tempore itaque dolorem ad sit
+      aut provident officia.
+    text2: ''
     actions:
       - label: Get Started
         type: button
@@ -35,7 +33,7 @@ blocks:
         icon: false
         link: /posts
     image:
-      src: /uploads/unsplash-75EFpyXu3Wg.jpg
+      src: /uploads/avatar.jpg
       alt: >-
         Photo of palm trees at sunset by Adam Birkett -
         unsplash.com/photos/75EFpyXu3Wg
