@@ -8,15 +8,15 @@ import { Section } from "../../layout/section";
 import { Container } from "../../layout/container";
 import MyCarousel from "../../carousel";
 import BootstrapCarousel from "../../carousel/bootstrap";
-import "./banner.module.css";
+import styles from "./banner.module.css";
 
 type Props = {};
 
 const BannerBlock = ({ data }: { data: PageBlocksBanner }) => {
   return (
-    <Section className="">
+    <Section >
       {data.bannerImages && (
-        <div data-tina-field={tinaField(data, "bannerImages")}>
+        <div className={styles.container} data-tina-field={tinaField(data, "bannerImages")}>
           {" "}
           {/* <MyCarousel images={data.bannerImages} /> */}
           <BootstrapCarousel images={data.bannerImages} />

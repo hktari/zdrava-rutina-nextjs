@@ -1,10 +1,15 @@
-.banner {
+.container {
+  background-color: orange;
+}
+
+.container .carousel-item {
+  height: 350px;
 }
 
 @media (min-width: 768px) {
-  .banner {
-    img {
-      height: 100vh;
-    }
+  .container {
+  }
+  .container .carousel-item {
+    height: 100vh;
   }
 }
