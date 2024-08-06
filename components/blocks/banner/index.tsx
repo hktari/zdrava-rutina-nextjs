@@ -2,27 +2,26 @@
 import * as React from "react";
 import type { Template } from "tinacms";
 import { tinaField } from "tinacms/dist/react";
-import { PageBlocksBanner } from "../../tina/__generated__/types";
+import { PageBlocksBanner } from "../../../tina/__generated__/types";
 import Image from "next/image";
-import { Section } from "../layout/section";
-import { Container } from "../layout/container";
-import MyCarousel from "../carousel";
-import BootstrapCarousel from "../carousel/bootstrap";
+import { Section } from "../../layout/section";
+import { Container } from "../../layout/container";
+import MyCarousel from "../../carousel";
+import BootstrapCarousel from "../../carousel/bootstrap";
+import "./banner.module.css";
 
 type Props = {};
 
 const BannerBlock = ({ data }: { data: PageBlocksBanner }) => {
   return (
-    <Section>
-      <Container className="">
-        {data.bannerImages && (
-          <div data-tina-field={tinaField(data, "bannerImages")}>
-            {" "}
-            {/* <MyCarousel images={data.bannerImages} /> */}
-            <BootstrapCarousel images={data.bannerImages} />
-          </div>
-        )}
-      </Container>
+    <Section className="">
+      {data.bannerImages && (
+        <div data-tina-field={tinaField(data, "bannerImages")}>
+          {" "}
+          {/* <MyCarousel images={data.bannerImages} /> */}
+          <BootstrapCarousel images={data.bannerImages} />
+        </div>
+      )}
     </Section>
   );
 };
@@ -37,8 +36,12 @@ export const bannerBlockSchema: Template = {
     defaultItem: {
       bannerImages: [
         {
-          src: "/uploads/avatar.jpg",
-          alt: "portrait",
+          src: "/uploads/hatha-joga.jpg",
+          alt: "woman doing hatha joga",
+        },
+        {
+          src: "/uploads/sea-bend-backward.jpeg",
+          alt: "womand sea bend backwards",
         },
       ],
     },

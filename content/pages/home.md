@@ -2,7 +2,6 @@
 title: Tina Cloud Starter
 blocks:
   - bannerImages:
-      - {}
       - src: /uploads/sea-bend-backward.jpeg
         alt: bend backwards
     _template: banner

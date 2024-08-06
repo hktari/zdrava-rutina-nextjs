@@ -1,3 +1,4 @@
+import "bootstrap/dist/css/bootstrap.min.css";
 import "../styles.css";
 import React from "react";
 import { ThemeProvider } from "../components/theme-provider";
@@ -5,6 +6,7 @@ import { Inter as FontSans, Lato, Nunito } from "next/font/google";
 import { cn } from "../lib/utils";
 import { Metadata } from "next";
 import client from "../tina/__generated__/client";
+
 
 const fontSans = FontSans({
   subsets: ["latin"],

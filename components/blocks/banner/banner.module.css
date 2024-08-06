@@ -1,0 +1,10 @@
+.banner {
+}
+
+@media (min-width: 768px) {
+  .banner {
+    img {
+      height: 100vh;
+    }
+  }
+}
