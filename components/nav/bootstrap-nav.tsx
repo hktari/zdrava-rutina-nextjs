@@ -8,8 +8,8 @@ import { tinaField } from "tinacms/dist/react";
 
 function BootstrapNav({ header }) {
   return (
-    <Navbar expand="lg" className="">
-      <Container className="bg-primary">
+    <Navbar expand="lg" fixed="top" className="bg-body-tertiary opacity-75">
+      <Container>
         <Navbar.Brand href="/">
           <h1 data-tina-field={tinaField(header, "name")} className="mb-1">
             {header.name}
@@ -19,7 +19,9 @@ function BootstrapNav({ header }) {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
             {header.nav.map((item, index) => (
-              <Nav.Link href={item.href}>{item.label}</Nav.Link>
+              <Nav.Link key={`${item.label}-${index}`} href={item.href}>
+                {item.label}
+              </Nav.Link>
             ))}
           </Nav>
         </Navbar.Collapse>

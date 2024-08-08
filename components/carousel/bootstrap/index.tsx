@@ -1,4 +1,3 @@
-import "bootstrap/dist/css/bootstrap.min.css";
 import { useState } from "react";
 import { Carousel } from "react-bootstrap";
 import { PageBlocksBannerBannerImages } from "../../../tina/__generated__/types";
@@ -29,7 +28,7 @@ export default function BootstrapCarousel({
           <div className="d-md-none">
             <Image src={src} alt={alt} width={466} height={350} priority />
           </div>
-          <div className="d-none d-md-block">
+          <div className="d-none d-md-block" style={{ height: "100vh" }}>
             <Image src={src} alt={alt} priority fill />
           </div>
         </Carousel.Item>
