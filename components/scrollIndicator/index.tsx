@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import styles from "./scrollIndicator.module.css";
 import { BiChevronsDown } from "react-icons/bi";
@@ -8,13 +10,13 @@ const ScrollIndicator = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <div className={styles.container} onClick={onScrollDown}>
       <label
         style={{ visibility: "hidden" }}
         htmlFor="scrollButton"
         aria-label="scroll down"
       ></label>
-      <button id="scrollButton" onClick={onScrollDown}>
+      <button id="scrollButton">
         <BiChevronsDown className={styles.icon} />
       </button>
     </div>
