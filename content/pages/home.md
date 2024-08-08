@@ -9,28 +9,10 @@ blocks:
     _template: banner
   - headline: Welcome to the Tina Starter
     text: >
-      ## **Editors**
+      Hello, I'm [Name], a dedicated advocate for a holistic approach to health and wellness. I integrate the principles of yoga and meditation into my daily life to cultivate balance and inner peace. As a certified fitness trainer, I offer personalized training sessions designed to help you achieve your fitness goals while promoting overall well-being.
 
-
-      **Click this box to start editing it**. You will see the matching field
-      appear in the left sidebar for you to make changes. The edits will show in
-      this live preview. In that left panel, you can also navigate around the
-      page to change what you are editing (or just click a component here in the
-      preview, like you did before).
-
-
-      **Clicking 'Save' won't do anything in this demo** - but on your site it
-      will save the changes immediately or send an approval request to your team
-      for review.
     text2: >
-      ## Developers
-
-
-      This project is set up to show you the basics of working with Tina. You're
-      looking at the landing page, which pulls content from
-      `content/pages/home.md`, components from components/blocks, and puts them
-      all together in `pages/[filename].tsx`, all based on a config
-      `tina/config.tsx`.
+      In addition to fitness training, I provide therapeutic massage services, understanding the importance of relaxation and recovery in maintaining a healthy body and mind. With my comprehensive approach to wellness, I am committed to helping you lead a healthier, happier life through a blend of physical fitness, mindfulness, and restorative practices.
     actions:
       - label: Get Started
         type: button
