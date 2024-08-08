@@ -1,4 +1,5 @@
 "use client";
+import { Col, Row } from "react-bootstrap";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
@@ -7,10 +8,12 @@ import { tinaField } from "tinacms/dist/react";
 
 function BootstrapNav({ header }) {
   return (
-    <Navbar expand="lg" className="bg-body-tertiary">
-      <Container>
-        <Navbar.Brand href="#home">
-          <span data-tina-field={tinaField(header, "name")}>{header.name}</span>
+    <Navbar expand="lg" className="">
+      <Container className="bg-primary">
+        <Navbar.Brand href="/">
+          <h1 data-tina-field={tinaField(header, "name")} className="mb-1">
+            {header.name}
+          </h1>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
