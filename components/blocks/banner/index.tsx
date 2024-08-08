@@ -9,17 +9,22 @@ import { Container } from "../../layout/container";
 import MyCarousel from "../../carousel";
 import BootstrapCarousel from "../../carousel/bootstrap";
 import styles from "./banner.module.css";
+import ScrollIndicator from "../../scrollIndicator";
 
 type Props = {};
 
 const BannerBlock = ({ data }: { data: PageBlocksBanner }) => {
   return (
-    <Section >
+    <Section>
       {data.bannerImages && (
-        <div className={styles.container} data-tina-field={tinaField(data, "bannerImages")}>
+        <div
+          className={styles.container}
+          data-tina-field={tinaField(data, "bannerImages")}
+        >
           {" "}
           {/* <MyCarousel images={data.bannerImages} /> */}
           <BootstrapCarousel images={data.bannerImages} />
+          <ScrollIndicator />
         </div>
       )}
     </Section>

@@ -26,8 +26,10 @@
 }
 
 .icon {
-  height: var(--scroll-indicator-height);
-  transform-origin: center;
+  stroke: white;
+  color: white;
+  font-size: var(--scroll-indicator-height);
+    transform-origin: center;
   animation-name: moveDownAndFadeOut;
   animation-duration: 2.3s;
   animation-timing-function: linear;
