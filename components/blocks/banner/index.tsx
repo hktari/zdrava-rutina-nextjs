@@ -24,7 +24,9 @@ const BannerBlock = ({ data }: { data: PageBlocksBanner }) => {
           {" "}
           {/* <MyCarousel images={data.bannerImages} /> */}
           <BootstrapCarousel images={data.bannerImages} />
-          <ScrollIndicator />
+          <div className="d-none d-md-block">
+            <ScrollIndicator />
+          </div>
         </div>
       )}
     </Section>
