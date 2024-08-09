@@ -26,7 +26,15 @@ export default function BootstrapCarousel({
       {images.map(({ src, alt }, index) => (
         <Carousel.Item key={`${alt}-${src}-${index}`} interval={500}>
           <div className="d-md-none">
-            <Image src={src} alt={alt} width={466} height={450} priority />
+            <Image
+              src={src}
+              alt={alt}
+              width={466}
+              height={450}
+              objectFit="cover"
+              objectPosition="center"
+              priority
+            />
           </div>
           <div className="d-none d-md-block" style={{ height: "100vh" }}>
             <Image objectFit="contain" src={src} alt={alt} priority fill />
