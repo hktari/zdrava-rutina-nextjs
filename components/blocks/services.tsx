@@ -1,10 +1,63 @@
 import React from "react";
 import { Template } from "tinacms";
+import { Section } from "../layout/section";
+import { Container } from "react-bootstrap";
+import {
+  PageBlocksServices,
+  PageBlocksServicesItems,
+} from "../../tina/__generated__/types";
+import { TinaMarkdown } from "tinacms/dist/rich-text";
+import { tinaField } from "tinacms/dist/react";
 
 type Props = {};
 
-const ServicesBlock = (props: Props) => {
-  return <div>ServicesBlock</div>;
+type ServiceItemProps = {};
+
+const ServiceItem = ({
+  title,
+  description,
+  image,
+  link,
+}: PageBlocksServicesItems) => {
+  return (
+    <div className="col-md-4">
+      <div className="card">
+        <img src={image.src} alt={image.alt} className="card-img-top" />
+        <div className="card-body">
+          <h5 className="card-title">{title}</h5>
+          <p className="card-text">{description}</p>
+          <a href={link} className="btn btn-primary">
+            Več
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export const ServicesBlock = ({ data }: { data: PageBlocksServices }) => {
+  return (
+    <Section>
+      <Container>
+        {data.title && (
+          <h2 data-tina-field={tinaField(data, "title")}>{data.title}</h2>
+        )}
+        {data.text && (
+          <div data-tina-field={tinaField(data, "text")}>
+            <TinaMarkdown content={data.text}></TinaMarkdown>
+          </div>
+        )}
+
+        {data.items && (
+          <div data-tina-field={tinaField(data, "items")} className="row">
+            {data.items.map((item) => (
+              <ServiceItem {...item} />
+            ))}
+          </div>
+        )}
+      </Container>
+    </Section>
+  );
 };
 
 const defaultService = {
@@ -32,12 +85,9 @@ export const servicesBlockSchema: Template = {
       name: "title",
     },
     {
-      type: "string",
+      type: "rich-text",
       label: "Text",
       name: "text",
-      ui: {
-        component: "textarea",
-      },
     },
     {
       type: "object",

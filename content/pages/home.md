@@ -36,7 +36,9 @@ blocks:
         unsplash.com/photos/75EFpyXu3Wg
     color: default
     _template: hero
-  - items:
+  - title: Storitve
+    text: Ponujam naslednje storitve.
+    items:
       - image:
           alt: Hatha Joga
           src: /uploads/hatha-joga.jpg
@@ -49,9 +51,8 @@ blocks:
         link: /massages
         title: Masaže
         description: Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.
-    title: Storitve
-    text: Ponujam naslednje storitve.
     _template: services
+
   - quote: >-
       There are only two hard things in Computer Science: cache invalidation and
       naming things.
