@@ -4,14 +4,15 @@ import * as React from "react";
 import NavigationItemList from "../navigationItemList";
 import { GlobalHeader } from "../../../tina/__generated__/types";
 import { usePathname } from "next/navigation";
+import { useLayout } from "../../layout/layout-context";
 
 type Props = {
-  header: GlobalHeader;
   className?: string;
 };
 
-const FixedNavbar = ({ header, className }: Props) => {
-  const pageTitle = header.name;
+const FixedNavbar = ({ className }: Props) => {
+  const { pageData } = useLayout();
+  const pageTitle = pageData.title;
   const pathname = usePathname();
 
   const isHomePage = pathname === "/";
@@ -24,7 +25,7 @@ const FixedNavbar = ({ header, className }: Props) => {
     >
       <div className="c-navbar__container w-100 d-flex flex-column align-items-center">
         <h1 className="mb-0">{pageTitle}</h1>
-        <NavigationItemList navItems={header.nav} />
+        <NavigationItemList />
       </div>
     </nav>
   );

@@ -10,6 +10,7 @@ import NavItems from "./nav-items";
 import { useLayout } from "../layout/layout-context";
 import BootstrapNav from "./bootstrap-nav";
 import FixedNavbar from "../navbar/fixedNavbar";
+import StickyNavbar from "../navbar/stickyNavbar";
 
 const headerColor = {
   default:
@@ -37,12 +38,8 @@ export default function Header() {
 
   return (
     <div className={``}>
-      {/* <BootstrapNav header={header} /> */}
-      <FixedNavbar header={header} className="c-layout__navbar d-none d-md-block" />
-      {/* <FixedNavbar
-        title={title}
-        className="c-layout__navbar "
-      /> */}
+      <FixedNavbar className="c-layout__navbar d-none d-md-block" />
+      <StickyNavbar className="c-layout__navbar d-md-none" />
     </div>
   );
 }
