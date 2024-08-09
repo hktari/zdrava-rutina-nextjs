@@ -11,6 +11,10 @@ const ExactNavLink = ({ href, isActive, children }) => (
   </Link>
 );
 
+const pathNameMatchesHref = (href, pathname) => {
+  return pathname.replace("/", "") === href;
+};
+
 type Props = {
   navItems: GlobalHeader["nav"];
 };
@@ -22,7 +26,10 @@ const NavigationItemList = ({ navItems }: Props) => {
     <ul className="navbar-nav">
       {navItems.map(({ href, label }, index) => (
         <li key={`${href}-${label}-${index}`} className="nav-item order-md-1">
-          <ExactNavLink isActive={pathname.includes(href)} href={href}>
+          <ExactNavLink
+            isActive={pathNameMatchesHref(href, pathname)}
+            href={href}
+          >
             {label}
           </ExactNavLink>
         </li>

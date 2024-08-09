@@ -9,6 +9,11 @@
     font-family: $headings-font-family;
     font-weight: 300;
   }
+
+  .nav-link.active {
+    color: orange;
+  }
+
 }
 
 .c-navbar::before {
