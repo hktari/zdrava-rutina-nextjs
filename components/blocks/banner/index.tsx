@@ -22,8 +22,11 @@ const BannerBlock = ({ data }: { data: PageBlocksBanner }) => {
           data-tina-field={tinaField(data, "bannerImages")}
         >
           {" "}
-          {/* <MyCarousel images={data.bannerImages} /> */}
-          <BootstrapCarousel images={data.bannerImages} />
+          <BootstrapCarousel
+            indicators={false}
+            controls={false}
+            images={data.bannerImages}
+          />
           <div className="d-none d-md-block">
             <ScrollIndicator />
           </div>
