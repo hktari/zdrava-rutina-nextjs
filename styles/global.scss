@@ -1,1 +1,4 @@
-@import "./bootstrap"
+@import "./config/bootstrap";
+@import "./components/navbar/navbar";
+@import "./components/navbar/sticky/stickyNavbar";
+@import "./components/navbar/fixed/fixedNavbar";
