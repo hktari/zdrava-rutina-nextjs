@@ -1,5 +1,5 @@
 ---
-title: Tina Cloud Starter
+title: Zdrava Rutina
 blocks:
   - bannerImages:
       - src: /uploads/sea-bend-backward.jpeg
@@ -9,10 +9,17 @@ blocks:
     _template: banner
   - headline: Welcome to the Tina Starter
     text: >
-      Hello, I'm [Name], a dedicated advocate for a holistic approach to health and wellness. I integrate the principles of yoga and meditation into my daily life to cultivate balance and inner peace. As a certified fitness trainer, I offer personalized training sessions designed to help you achieve your fitness goals while promoting overall well-being.
-
+      Hello, I'm \[Name], a dedicated advocate for a holistic approach to health
+      and wellness. I integrate the principles of yoga and meditation into my
+      daily life to cultivate balance and inner peace. As a certified fitness
+      trainer, I offer personalized training sessions designed to help you
+      achieve your fitness goals while promoting overall well-being.
     text2: >
-      In addition to fitness training, I provide therapeutic massage services, understanding the importance of relaxation and recovery in maintaining a healthy body and mind. With my comprehensive approach to wellness, I am committed to helping you lead a healthier, happier life through a blend of physical fitness, mindfulness, and restorative practices.
+      In addition to fitness training, I provide therapeutic massage services,
+      understanding the importance of relaxation and recovery in maintaining a
+      healthy body and mind. With my comprehensive approach to wellness, I am
+      committed to helping you lead a healthier, happier life through a blend of
+      physical fitness, mindfulness, and restorative practices.
     actions:
       - label: Get Started
         type: button
