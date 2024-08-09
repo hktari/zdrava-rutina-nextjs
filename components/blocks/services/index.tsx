@@ -1,40 +1,15 @@
 import React from "react";
 import { Template } from "tinacms";
-import { Section } from "../layout/section";
+import { Section } from "../../layout/section";
 import { Container } from "react-bootstrap";
 import {
   PageBlocksServices,
   PageBlocksServicesItems,
-} from "../../tina/__generated__/types";
+} from "../../../tina/__generated__/types";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
 import { tinaField } from "tinacms/dist/react";
-import { link } from "fs";
-
-type Props = {};
-
-type ServiceItemProps = {};
-
-const ServiceItem = ({
-  title,
-  description,
-  image,
-  link,
-}: PageBlocksServicesItems) => {
-  return (
-    <div className="col-md-4">
-      <div className="card">
-        <img src={image.src} alt={image.alt} className="card-img-top" />
-        <div className="card-body">
-          <h5 className="card-title">{title}</h5>
-          <p className="card-text">{description}</p>
-          <a href={link} className="btn btn-primary">
-            Več
-          </a>
-        </div>
-      </div>
-    </div>
-  );
-};
+import ServiceCard from "./serviceCard";
+import ServicesCardGroup from "./servicesCardGroup";
 
 export const ServicesBlock = ({ data }: { data: PageBlocksServices }) => {
   return (
@@ -51,9 +26,7 @@ export const ServicesBlock = ({ data }: { data: PageBlocksServices }) => {
 
         {data.items && (
           <div data-tina-field={tinaField(data, "items")} className="row">
-            {data.items.map((item) => (
-              <ServiceItem {...item} />
-            ))}
+            <ServicesCardGroup {...data} />
           </div>
         )}
       </Container>
@@ -68,7 +41,7 @@ const defaultServiceItem = {
     src: "/uploads/hatha-joga.jpg",
     alt: "Hatha joga",
   },
-  link: '/hatha-joga'
+  link: "/hatha-joga",
 };
 
 export const servicesBlockSchema: Template = {
