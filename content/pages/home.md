@@ -7,9 +7,9 @@ blocks:
       - src: /uploads/hatha-joga.jpg
         alt: woman sitting cross-legged
     _template: banner
-  - headline: Welcome to the Tina Starter
+  - headline: Zdrav življenski stil
     text: >
-      Hello, I'm \[Name], a dedicated advocate for a holistic approach to health
+      Hello, I'm Anže, a dedicated advocate for a holistic approach to health
       and wellness. I integrate the principles of yoga and meditation into my
       daily life to cultivate balance and inner peace. As a certified fitness
       trainer, I offer personalized training sessions designed to help you
