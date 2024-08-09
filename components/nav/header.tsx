@@ -37,9 +37,9 @@ export default function Header() {
       : headerColor.default;
 
   return (
-    <div className={``}>
-      <FixedNavbar className="c-layout__navbar d-none d-md-block" />
-      <StickyNavbar className="c-layout__navbar d-md-none" />
+    <div className={`c-header`} >
+      <FixedNavbar className="d-none d-md-block" />
+      <StickyNavbar className="d-md-none" />
     </div>
   );
 }

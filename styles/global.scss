@@ -1,4 +1,6 @@
+@import "./config/zIndex";
 @import "./config/bootstrap";
+@import "./components/header";
 @import "./components/navbar/navbar";
 @import "./components/navbar/sticky/stickyNavbar";
 @import "./components/navbar/fixed/fixedNavbar";
