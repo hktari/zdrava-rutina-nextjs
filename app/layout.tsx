@@ -1,5 +1,5 @@
-import "../styles.css";
-import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "../styles/global.scss";
+
 
 import React from "react";
 import { ThemeProvider } from "../components/theme-provider";
