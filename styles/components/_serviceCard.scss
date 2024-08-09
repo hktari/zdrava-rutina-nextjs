@@ -1,6 +1,9 @@
 .c-service-card {
   cursor: pointer;
-  height: 206px;
+
+  .card-img-top {
+    height: 206px;
+  }
 }
 
 .c-service-card__title.card-title {
@@ -10,6 +13,8 @@
 
 @include media-breakpoint-up(md) {
   .c-service-card {
-    height: 380px;
+    .card-img-top {
+      height: 380px;
+    }
   }
 }
