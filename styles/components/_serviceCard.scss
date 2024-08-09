@@ -1,0 +1,8 @@
+.c-service-card {
+  cursor: pointer;
+}
+
+.c-service-card__title.card-title {
+  font-weight: $card-title-font-weight;
+  color: $card-color;
+}
