@@ -1,6 +1,9 @@
+"use client";
+
 import * as React from "react";
 import NavigationItemList from "../navigationItemList";
 import { GlobalHeader } from "../../../tina/__generated__/types";
+import { usePathname } from "next/navigation";
 
 type Props = {
   header: GlobalHeader;
@@ -9,10 +12,9 @@ type Props = {
 
 const FixedNavbar = ({ header, className }: Props) => {
   const pageTitle = header.name;
+  const pathname = usePathname();
 
-  // TODO: use next API to retrieve is HomePage or not
-  // const isHomePage = pageTitle === siteTitle;
-  const isHomePage = false;
+  const isHomePage = pathname === "/";
 
   return (
     <nav
