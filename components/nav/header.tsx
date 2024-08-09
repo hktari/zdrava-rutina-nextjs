@@ -9,6 +9,7 @@ import { Icon } from "../icon";
 import NavItems from "./nav-items";
 import { useLayout } from "../layout/layout-context";
 import BootstrapNav from "./bootstrap-nav";
+import FixedNavbar from "../navbar/fixedNavbar";
 
 const headerColor = {
   default:
@@ -36,7 +37,12 @@ export default function Header() {
 
   return (
     <div className={``}>
-      <BootstrapNav header={header} />
+      {/* <BootstrapNav header={header} /> */}
+      <FixedNavbar header={header} className="c-layout__navbar d-md-none" />
+      {/* <FixedNavbar
+        title={title}
+        className="c-layout__navbar d-none d-md-block"
+      /> */}
     </div>
   );
 }

@@ -1,5 +1,4 @@
 import * as React from "react";
-import PropTypes from "prop-types";
 import NavigationItemList from "../navigationItemList";
 import { GlobalHeader } from "../../../tina/__generated__/types";
 
@@ -27,14 +26,6 @@ const FixedNavbar = ({ header, className }: Props) => {
       </div>
     </nav>
   );
-};
-
-FixedNavbar.propTypes = {
-  siteTitle: PropTypes.string,
-};
-
-FixedNavbar.defaultProps = {
-  siteTitle: ``,
 };
 
 export default FixedNavbar;
