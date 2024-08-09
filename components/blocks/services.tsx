@@ -8,6 +8,7 @@ import {
 } from "../../tina/__generated__/types";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
 import { tinaField } from "tinacms/dist/react";
+import { link } from "fs";
 
 type Props = {};
 
@@ -38,7 +39,7 @@ const ServiceItem = ({
 export const ServicesBlock = ({ data }: { data: PageBlocksServices }) => {
   return (
     <Section>
-      <Container>
+      <Container className="bg-danger">
         {data.title && (
           <h2 data-tina-field={tinaField(data, "title")}>{data.title}</h2>
         )}
@@ -60,13 +61,14 @@ export const ServicesBlock = ({ data }: { data: PageBlocksServices }) => {
   );
 };
 
-const defaultService = {
+const defaultServiceItem = {
   title: "Storitev 1",
-  text: "Opis storitve hatha joga",
+  description: "Opis storitve hatha joga",
   image: {
     src: "/uploads/hatha-joga.jpg",
     alt: "Hatha joga",
   },
+  link: '/hatha-joga'
 };
 
 export const servicesBlockSchema: Template = {
@@ -75,7 +77,7 @@ export const servicesBlockSchema: Template = {
   ui: {
     previewSrc: "",
     defaultItem: {
-      items: [defaultService, defaultService, defaultService],
+      items: [defaultServiceItem, defaultServiceItem, defaultServiceItem],
     },
   },
   fields: [
@@ -101,7 +103,7 @@ export const servicesBlockSchema: Template = {
           };
         },
         defaultItem: {
-          ...defaultService,
+          ...defaultServiceItem,
         },
       },
       fields: [
@@ -129,7 +131,7 @@ export const servicesBlockSchema: Template = {
           name: "image",
           fields: [
             {
-              type: "string",
+              type: "image",
               label: "Slika",
               name: "src",
             },
