@@ -12,15 +12,29 @@ const ServiceCard = ({
   return (
     <Link href={link} className="c-service-card card border-0 border-none p-0">
       {image && (
-        <Image
-          className="card-img-top"
-          width={650}
-          height={382}
-          objectFit="cover"
-          objectPosition="center"
-          src={image.src}
-          alt={image.alt}
-        />
+        <>
+          <div className="d-none d-md-block">
+            <Image
+              className="card-img-top"
+              width={650}
+              height={382}
+              objectFit="cover"
+              objectPosition="center"
+              src={image.src}
+              alt={image.alt}
+            />
+          </div>
+          <div className="d-md-none">
+            <Image
+              className="card-img-top"
+              fill
+              objectFit="cover"
+              objectPosition="center"
+              src={image.src}
+              alt={image.alt}
+            />
+          </div>
+        </>
       )}
       <div className="card-body">
         <h5 className="c-service-card__title card-title">{title}</h5>
