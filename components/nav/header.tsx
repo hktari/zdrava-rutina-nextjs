@@ -38,10 +38,10 @@ export default function Header() {
   return (
     <div className={``}>
       {/* <BootstrapNav header={header} /> */}
-      <FixedNavbar header={header} className="c-layout__navbar d-md-none" />
+      <FixedNavbar header={header} className="c-layout__navbar d-none d-md-block" />
       {/* <FixedNavbar
         title={title}
-        className="c-layout__navbar d-none d-md-block"
+        className="c-layout__navbar "
       /> */}
     </div>
   );

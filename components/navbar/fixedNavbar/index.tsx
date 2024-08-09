@@ -22,7 +22,7 @@ const FixedNavbar = ({ header, className }: Props) => {
     >
       <div className="c-navbar__container w-100 d-flex flex-column align-items-center">
         <h1 className="mb-0">{pageTitle}</h1>
-        <NavigationItemList />
+        <NavigationItemList navItems={header.nav} />
       </div>
     </nav>
   );
