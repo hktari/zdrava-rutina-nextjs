@@ -6,6 +6,7 @@ import { featureBlockSchema } from "../../components/blocks/features";
 import { bannerBlockSchema } from "../../components/blocks/banner";
 import { servicesBlockSchema } from "../../components/blocks/services";
 import { wordCollageBlockSchema } from "../../components/blocks/wordsCollage";
+import { contactBlockSchema } from "../../components/blocks/contact";
 
 const Page: Collection = {
   label: "Pages",
@@ -49,6 +50,7 @@ const Page: Collection = {
         bannerBlockSchema,
         servicesBlockSchema,
         wordCollageBlockSchema,
+        contactBlockSchema
       ],
     },
   ],

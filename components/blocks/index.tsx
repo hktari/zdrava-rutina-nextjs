@@ -7,6 +7,7 @@ import { Testimonial } from "./testimonial";
 import BannerBlock from "./banner";
 import ServicesBlock from "./services";
 import WordCollageBlock from "./wordsCollage";
+import ContactBlock from "./contact";
 
 type Prop = {
   blocks: Page["blocks"] | Service["blocks"];
@@ -44,6 +45,8 @@ const Block = (block: PageBlocks) => {
       return <ServicesBlock data={block} />;
     case "PageBlocksWordCollage":
       return <WordCollageBlock data={block} />;
+    case "PageBlocksContact":
+      return <ContactBlock data={block} />;
     default:
       return null;
   }
