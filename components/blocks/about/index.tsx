@@ -6,37 +6,42 @@ import { Section } from "../../layout/section";
 import Image from "next/image";
 import { Template } from "tinacms";
 import { tinaField } from "tinacms/dist/react";
+import { PageBlocksAbout } from "../../../tina/__generated__/types";
 
-const AboutBlock = ({ data }) => {
+const AboutBlock = ({ data }: { data: PageBlocksAbout }) => {
   const { avatar, description, heading } = data;
 
   return (
     <Section id="about" className="c-about-section">
-      <div data-tina-field={tinaField(data, "heading")}>
-        <H2>{heading}</H2>
-      </div>
-      <motion.div {...fadeInAnimationProps}>
-        <div
-          data-tina-field={tinaField(data, "avatar")}
-          className="c-about-section--avatar float-start me-2 rounded"
-        >
-          <Image
-            src={avatar?.image}
-            alt={avatar?.alt}
-            width={228}
-            height={228}
-            objectFit="contain"
-          />
+      {heading && (
+        <div data-tina-field={tinaField(data, "heading")}>
+          <H2>{heading}</H2>
         </div>
+      )}
+      {avatar && (
+        <motion.div {...fadeInAnimationProps}>
+          <div
+            data-tina-field={tinaField(data, "avatar")}
+            className="c-about-section--avatar float-start me-2 rounded"
+          >
+            <Image
+              src={avatar?.src}
+              alt={avatar?.alt}
+              width={228}
+              height={228}
+              objectFit="contain"
+            />
+          </div>
 
-        <motion.p
-          data-tina-field={tinaField(data, "description")}
-          style={{ textAlign: "justify" }}
-          {...fadeInAnimationProps}
-        >
-          {description}
-        </motion.p>
-      </motion.div>
+          <motion.p
+            data-tina-field={tinaField(data, "description")}
+            style={{ textAlign: "justify" }}
+            {...fadeInAnimationProps}
+          >
+            {description}
+          </motion.p>
+        </motion.div>
+      )}
     </Section>
   );
 };
