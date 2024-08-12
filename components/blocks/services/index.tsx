@@ -1,6 +1,6 @@
 import React from "react";
 import { Template } from "tinacms";
-import { Section } from "../../layout/section";
+import Section from "../../layout/section";
 import { Container } from "react-bootstrap";
 import {
   PageBlocksServices,

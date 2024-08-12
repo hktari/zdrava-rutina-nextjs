@@ -3,7 +3,7 @@ import { Template } from "tinacms";
 import { BiEnvelope, BiLogoFacebook, BiLogoTiktok } from "react-icons/bi";
 import { BiLogoInstagram } from "react-icons/bi";
 import { BiPhone } from "react-icons/bi";
-import { Section } from "../../layout/section";
+import Section from "../../layout/section";
 import { PageBlocksContact } from "../../../tina/__generated__/types";
 import { tinaField } from "tinacms/dist/react";
 import {

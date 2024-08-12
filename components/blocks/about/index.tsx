@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { fadeInAnimationProps } from "../../../animations/common";
 import H2 from "../../h2";
-import { Section } from "../../layout/section";
+import Section from "../../layout/section";
 import Image from "next/image";
 import { Template } from "tinacms";
 import { tinaField } from "tinacms/dist/react";

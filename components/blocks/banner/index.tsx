@@ -4,7 +4,7 @@ import type { Template } from "tinacms";
 import { tinaField } from "tinacms/dist/react";
 import { PageBlocksBanner } from "../../../tina/__generated__/types";
 import Image from "next/image";
-import { Section } from "../../layout/section";
+import Section from "../../layout/section";
 import { Container } from "../../layout/container";
 import MyCarousel from "../../carousel";
 import BootstrapCarousel from "../../carousel/bootstrap";

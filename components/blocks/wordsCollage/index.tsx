@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { useInView } from "framer-motion";
-import { Section } from "../../layout/section";
+import Section from "../../layout/section";
 import { tinaField } from "tinacms/dist/react";
 import { PageBlocksWordCollageWords } from "../../../tina/__generated__/types";
 

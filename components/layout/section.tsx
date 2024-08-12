@@ -1,11 +1,34 @@
 import React from "react";
-import { useLayout } from "../layout/layout-context";
 
-export const Section = ({ children, color = "", className = "", id = "" }) => {
-  const { theme } = useLayout();
+type SectionProps = {
+  className?: string;
+  children: React.ReactNode;
+  noSpacing?: boolean;
+  noContainer?: boolean;
+  id?: string;
+  alternativeStyle?: boolean;
+};
+
+const Section = ({
+  className,
+  children,
+  noSpacing,
+  noContainer,
+  id,
+  alternativeStyle,
+}: SectionProps) => {
   return (
-    <section id={id} className={``}>
+    <section
+      id={id}
+      className={`c-section ${noSpacing ? "" : "pt-4"} ${
+        noContainer ? "" : "container"
+      } ${className ? className : ""} ${
+        alternativeStyle ? `c-section--alternative` : ""
+      }`}
+    >
       {children}
     </section>
   );
 };
+
+export default Section;

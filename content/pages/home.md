@@ -7,6 +7,12 @@ blocks:
       - src: /uploads/sea-bend-backward.jpeg
         alt: womand sea bend backwards
     _template: banner
+  - heading: O meni
+    description: ''
+    avatar:
+      src: /uploads/avatar.jpg
+      alt: avatar
+    _template: about
   - words:
       - text: slabše počutje
         fontSize: '2'
