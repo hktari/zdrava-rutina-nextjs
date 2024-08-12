@@ -5,10 +5,12 @@ import Image from "next/image";
 
 export default function BootstrapCarousel({
   images,
+  intervalMs = 2500,
   indicators = true,
   controls = false,
 }: {
   indicators?: boolean;
+  intervalMs?: number;
   controls?: boolean;
   images: PageBlocksBannerBannerImages[];
 }) {
@@ -19,6 +21,8 @@ export default function BootstrapCarousel({
   return (
     <Carousel
       activeIndex={index}
+      interval={intervalMs}
+      fade={true}
       onSelect={handleSelect}
       indicators={indicators}
       controls={controls}

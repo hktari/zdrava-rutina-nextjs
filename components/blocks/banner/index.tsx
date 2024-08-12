@@ -14,6 +14,10 @@ import ScrollIndicator from "../../scrollIndicator";
 type Props = {};
 
 const BannerBlock = ({ data }: { data: PageBlocksBanner }) => {
+  const DefaultCarouselIntervalSeconds = 2.5;
+  const carouselIntervalMs =
+    (data?.carouselIntervalSeconds || DefaultCarouselIntervalSeconds) * 1000;
+
   return (
     <Section>
       {data.bannerImages && (
@@ -23,6 +27,7 @@ const BannerBlock = ({ data }: { data: PageBlocksBanner }) => {
         >
           {" "}
           <BootstrapCarousel
+            intervalMs={carouselIntervalMs}
             indicators={false}
             controls={false}
             images={data.bannerImages}
@@ -57,6 +62,15 @@ export const bannerBlockSchema: Template = {
     },
   },
   fields: [
+    {
+      type: "number",
+      name: "carouselIntervalSeconds",
+      label: "Časovni Zamik med slajdi",
+      description: "Interval in seconds between carousel slides",
+      ui: {
+        defaultValue: 2.5,
+      },
+    },
     {
       type: "object",
       label: "Slike",

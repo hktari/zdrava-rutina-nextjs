@@ -1,6 +1,12 @@
 ---
 title: Zdrava Rutina
 blocks:
+  - bannerImages:
+      - src: /uploads/hatha-joga.jpg
+        alt: woman doing hatha joga
+      - src: /uploads/sea-bend-backward.jpeg
+        alt: womand sea bend backwards
+    _template: banner
   - words:
       - text: slabše počutje
         fontSize: '2'
@@ -33,13 +39,6 @@ blocks:
         fontStyle: normal
         fontWeight: '400'
     _template: wordCollage
-  - title: Kontaktirajte nas
-    contactItems:
-      email: hi@zdrava-rutina.com
-      telephone: '+38641222333'
-      socialMedia:
-        instagram: 'https://www.instagram.com/zdrava.rutina'
-    _template: contact
   - title: Storitve
     text: |
       Ponujam naslednje storitve.
@@ -57,5 +56,12 @@ blocks:
           src: /uploads/massage.jpg
           alt: Massage
     _template: services
+  - title: Kontaktirajte nas
+    contactItems:
+      email: hi@zdrava-rutina.com
+      telephone: '+38641222333'
+      socialMedia:
+        instagram: 'https://www.instagram.com/zdrava.rutina'
+    _template: contact
 ---
 
