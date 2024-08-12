@@ -21,8 +21,8 @@ type ContactInfoProps = {
 const ContactInfo = ({ icon, href, title, tinaField }: ContactInfoProps) => {
   return (
     <div className="c-contact-info" data-tina-field={tinaField}>
-      <div className="c-contact-info__icon d-none d-md-flex position-relative justify-content-between mt-3 align-self-stretch">
-        {icon}
+      <div className="c-contact-info__icon d-none d-md-flex position-relative justify-content-between align-items-center mt-3 align-self-stretch">
+        <div className="fs-2">{icon}</div>
         <a
           className="flex-grow-1 stretched-link fs-4 ms-3 d-none d-md-inline text-start"
           href={href}
