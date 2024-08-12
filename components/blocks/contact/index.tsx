@@ -6,6 +6,11 @@ import { BiPhone } from "react-icons/bi";
 import { Section } from "../../layout/section";
 import { PageBlocksContact } from "../../../tina/__generated__/types";
 import { tinaField } from "tinacms/dist/react";
+import {
+  getFacebookUsername,
+  getInstagramUsername,
+  getTiktokUsername,
+} from "./social";
 
 type ContactInfoProps = {
   icon: React.ReactNode;
