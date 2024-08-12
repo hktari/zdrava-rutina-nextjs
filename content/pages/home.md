@@ -1,6 +1,13 @@
 ---
 title: Zdrava Rutina
 blocks:
+  - title: Kontaktirajte nas
+    contactItems:
+      email: hi@zdrava-rutina.com
+      telephone: '+38641222333'
+      socialMedia:
+        instagram: 'https://www.instagram.com/zdrava.rutina'
+    _template: contact
   - title: Storitve
     text: |
       Ponujam naslednje storitve.

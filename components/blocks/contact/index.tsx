@@ -5,15 +5,17 @@ import { BiLogoInstagram } from "react-icons/bi";
 import { BiPhone } from "react-icons/bi";
 import { Section } from "../../layout/section";
 import { PageBlocksContact } from "../../../tina/__generated__/types";
+import { tinaField } from "tinacms/dist/react";
 
 type ContactInfoProps = {
   icon: React.ReactNode;
   href: string;
   title: string;
+  tinaField: string;
 };
-const ContactInfo = ({ icon, href, title }: ContactInfoProps) => {
+const ContactInfo = ({ icon, href, title, tinaField }: ContactInfoProps) => {
   return (
-    <div className="c-contact-info">
+    <div className="c-contact-info" data-tina-field={tinaField}>
       <div className="c-contact-info__icon d-none d-md-flex position-relative justify-content-between mt-3 align-self-stretch">
         {icon}
         <a
@@ -41,41 +43,55 @@ const ContactBlock = ({ data }: { data: PageBlocksContact }) => {
       <div className="d-md-flex justify-content-center">
         <div className="card p-3 px-4 pt-md-2 border-0 bg-primary ">
           <div className="card-body text-center">
-            <h2 className="card-title d-none d-md-block">{title}</h2>
+            <h2
+              data-tina-field={tinaField(data, "title")}
+              className="card-title d-none d-md-block"
+            >
+              {title}
+            </h2>
             <div className="card-text mt-md-3">
               <div className="d-flex justify-content-evenly align-items-center flex-md-column">
-                <ContactInfo
-                  icon={<BiEnvelope />}
-                  href={`mailto:${email}`}
-                  title="Email"
-                />
+                {email && (
+                  <ContactInfo
+                    tinaField={tinaField(data.contactItems, "email")}
+                    icon={<BiEnvelope />}
+                    href={`mailto:${email}`}
+                    title={email}
+                  />
+                )}
 
                 {instagram && (
                   <ContactInfo
+                    tinaField={tinaField(socialMedia, "instagram")}
                     icon={<BiLogoInstagram />}
                     href={`${socialMedia?.instagram}`}
-                    title="Instagram"
+                    title={getInstagramUsername(instagram)}
                   />
                 )}
                 {facebook && (
                   <ContactInfo
+                    tinaField={tinaField(socialMedia, "facebook")}
                     icon={<BiLogoFacebook />}
                     href={facebook}
-                    title="Facebook"
+                    title={getFacebookUsername(facebook)}
                   />
                 )}
                 {tiktok && (
                   <ContactInfo
+                    tinaField={tinaField(socialMedia, "tiktok")}
                     icon={<BiLogoTiktok />}
                     href={tiktok}
-                    title="TikTok"
+                    title={getTiktokUsername(tiktok)}
                   />
                 )}
-                <ContactInfo
-                  icon={<BiPhone />}
-                  href={`tel:${telephone}`}
-                  title="Tel"
-                />
+                {telephone && (
+                  <ContactInfo
+                    tinaField={tinaField(data.contactItems, "telephone")}
+                    icon={<BiPhone />}
+                    href={`tel:${telephone}`}
+                    title={telephone}
+                  />
+                )}
               </div>
             </div>
           </div>
