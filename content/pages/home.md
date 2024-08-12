@@ -1,5 +1,5 @@
 ---
-title: Zdrava Rutina
+title: Prva Stran
 blocks:
   - bannerImages:
       - src: /uploads/hatha-joga.jpg
@@ -43,6 +43,18 @@ blocks:
     text: |
       Ponujam naslednje storitve.
     items:
+      - title: Skupinske Meditacije
+        link: /skupinske-meditacije
+        description: Opis storitve skupinskih meditacij
+        image:
+          src: /uploads/meditation-group.jpg
+          alt: Meditation
+      - title: Osebno Trenerstvo
+        link: /osebno-trenerstvo
+        description: Opis storitve osebno trenerstvo
+        image:
+          src: /uploads/personal-trainer.jpg
+          alt: personal trainer female
       - title: Hatha Joga
         link: /hatha-joga
         description: Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.
