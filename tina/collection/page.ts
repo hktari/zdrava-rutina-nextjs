@@ -50,7 +50,7 @@ const Page: Collection = {
         bannerBlockSchema,
         servicesBlockSchema,
         wordCollageBlockSchema,
-        contactBlockSchema
+        contactBlockSchema,
       ],
     },
   ],
