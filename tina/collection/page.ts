@@ -5,6 +5,7 @@ import { testimonialBlockSchema } from "../../components/blocks/testimonial";
 import { featureBlockSchema } from "../../components/blocks/features";
 import { bannerBlockSchema } from "../../components/blocks/banner";
 import { servicesBlockSchema } from "../../components/blocks/services";
+import { wordCollageBlockSchema } from "../../components/blocks/wordsCollage";
 
 const Page: Collection = {
   label: "Pages",
@@ -47,6 +48,7 @@ const Page: Collection = {
         testimonialBlockSchema,
         bannerBlockSchema,
         servicesBlockSchema,
+        wordCollageBlockSchema,
       ],
     },
   ],

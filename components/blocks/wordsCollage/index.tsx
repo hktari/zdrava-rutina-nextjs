@@ -33,7 +33,7 @@ const WordCollageItem = ({
     </span>
   );
 };
-const WordsCollageSection = ({ data }) => {
+const WordCollageBlock = ({ data }) => {
   const { words } = data || [];
 
   return (
@@ -54,11 +54,11 @@ const WordsCollageSection = ({ data }) => {
   );
 };
 
-export default WordsCollageSection;
+export default WordCollageBlock;
 
 const defaultWordCollageItem = {};
 
-export const servicesBlockSchema: import("tinacms").Template = {
+export const wordCollageBlockSchema: import("tinacms").Template = {
   name: "wordCollage",
   label: "Kolaž Besed",
   ui: {
