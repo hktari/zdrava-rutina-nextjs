@@ -8,6 +8,7 @@ import BannerBlock from "./banner";
 import ServicesBlock from "./services";
 import WordCollageBlock from "./wordsCollage";
 import ContactBlock from "./contact";
+import AboutBlock from "./about";
 
 type Prop = {
   blocks: Page["blocks"] | Service["blocks"];
@@ -47,6 +48,8 @@ const Block = (block: PageBlocks) => {
       return <WordCollageBlock data={block} />;
     case "PageBlocksContact":
       return <ContactBlock data={block} />;
+    case "PageBlocksAbout":
+      return <AboutBlock data={block} />;
     default:
       return null;
   }

@@ -7,6 +7,7 @@ import { bannerBlockSchema } from "../../components/blocks/banner";
 import { servicesBlockSchema } from "../../components/blocks/services";
 import { wordCollageBlockSchema } from "../../components/blocks/wordsCollage";
 import { contactBlockSchema } from "../../components/blocks/contact";
+import { aboutBlockSchema } from "../../components/blocks/about";
 
 const Page: Collection = {
   label: "Pages",
@@ -16,11 +17,9 @@ const Page: Collection = {
     router: ({ document }) => {
       if (document._sys.filename === "home") {
         return `/`;
+      } else {
+        return document._sys.filename;
       }
-      if (document._sys.filename === "about") {
-        return `/about`;
-      }
-      return undefined;
     },
   },
   fields: [
@@ -51,6 +50,7 @@ const Page: Collection = {
         servicesBlockSchema,
         wordCollageBlockSchema,
         contactBlockSchema,
+        aboutBlockSchema,
       ],
     },
   ],
