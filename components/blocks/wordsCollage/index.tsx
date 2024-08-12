@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
-import { graphql } from "gatsby";
-import Section from "../Section";
 import { useInView } from "framer-motion";
+import { Section } from "../../layout/section";
 
 const WordCollageItem = ({
   text,
