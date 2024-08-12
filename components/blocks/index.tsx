@@ -1,5 +1,5 @@
 import { tinaField } from "tinacms/dist/react";
-import { Page, PageBlocks, Service } from "../../tina/__generated__/types";
+import { Page, PageBlocks } from "../../tina/__generated__/types";
 import { Hero } from "./hero";
 import { Content } from "./content";
 import { Features } from "./features";
@@ -11,7 +11,7 @@ import ContactBlock from "./contact";
 import AboutBlock from "./about";
 
 type Prop = {
-  blocks: Page["blocks"] | Service["blocks"];
+  blocks: Page["blocks"];
 };
 
 export const Blocks = ({ blocks }: Prop) => {
