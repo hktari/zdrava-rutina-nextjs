@@ -46,6 +46,17 @@ export default AboutBlock;
 export const aboutBlockSchema: Template = {
   name: "about",
   label: "O meni",
+  ui: {
+    defaultItem: {
+      heading: "O meni",
+      description:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla nec purus feugiat, molestie ipsum et, ultricies metus. Nullam nec nulla auctor, tincidunt sapien nec, ultricies metus. Nullam nec nulla auctor, tincidunt sapien nec, ultricies metus. Nullam nec nulla auctor, tincidunt sapien nec, ultricies metus.",
+      avatar: {
+        src: "/uploads/avatar.jpg",
+        alt: "avatar",
+      },
+    },
+  },
   fields: [
     {
       type: "string",
