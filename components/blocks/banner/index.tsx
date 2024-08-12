@@ -20,23 +20,25 @@ const BannerBlock = ({ data }: { data: PageBlocksBanner }) => {
 
   return (
     <Section>
-      {data.bannerImages && (
-        <div
-          className={styles.container}
-          data-tina-field={tinaField(data, "bannerImages")}
-        >
-          {" "}
-          <BootstrapCarousel
-            intervalMs={carouselIntervalMs}
-            indicators={false}
-            controls={false}
-            images={data.bannerImages}
-          />
-          <div className="d-none d-md-block">
-            <ScrollIndicator />
+      <>
+        {data.bannerImages && (
+          <div
+            className={styles.container}
+            data-tina-field={tinaField(data, "bannerImages")}
+          >
+            {" "}
+            <BootstrapCarousel
+              intervalMs={carouselIntervalMs}
+              indicators={false}
+              controls={false}
+              images={data.bannerImages}
+            />
+            <div className="d-none d-md-block">
+              <ScrollIndicator />
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </>
     </Section>
   );
 };

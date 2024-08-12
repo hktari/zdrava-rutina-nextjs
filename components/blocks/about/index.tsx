@@ -13,35 +13,37 @@ const AboutBlock = ({ data }: { data: PageBlocksAbout }) => {
 
   return (
     <Section id="about" className="c-about-section">
-      {heading && (
-        <div data-tina-field={tinaField(data, "heading")}>
-          <H2>{heading}</H2>
-        </div>
-      )}
-      {avatar && (
-        <motion.div {...fadeInAnimationProps}>
-          <div
-            data-tina-field={tinaField(data, "avatar")}
-            className="c-about-section--avatar float-start me-2 rounded"
-          >
-            <Image
-              src={avatar?.src}
-              alt={avatar?.alt}
-              width={228}
-              height={228}
-              objectFit="contain"
-            />
+      <>
+        {heading && (
+          <div data-tina-field={tinaField(data, "heading")}>
+            <H2>{heading}</H2>
           </div>
+        )}
+        {avatar && (
+          <motion.div {...fadeInAnimationProps}>
+            <div
+              data-tina-field={tinaField(data, "avatar")}
+              className="c-about-section--avatar float-start me-2 rounded"
+            >
+              <Image
+                src={avatar?.src}
+                alt={avatar?.alt}
+                width={228}
+                height={228}
+                objectFit="contain"
+              />
+            </div>
 
-          <motion.p
-            data-tina-field={tinaField(data, "description")}
-            style={{ textAlign: "justify" }}
-            {...fadeInAnimationProps}
-          >
-            {description}
-          </motion.p>
-        </motion.div>
-      )}
+            <motion.p
+              data-tina-field={tinaField(data, "description")}
+              style={{ textAlign: "justify" }}
+              {...fadeInAnimationProps}
+            >
+              {description}
+            </motion.p>
+          </motion.div>
+        )}
+      </>
     </Section>
   );
 };
