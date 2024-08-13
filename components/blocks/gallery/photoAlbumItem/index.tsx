@@ -5,9 +5,10 @@ import Image from "next/image";
 type Props = {
   image: PageBlocksImageGalleryImages;
   minPhotoWidth: number;
+  sizes: string;
 };
 
-const PhotoAlbumItem = ({ image, minPhotoWidth }: Props) => {
+const PhotoAlbumItem = ({ image, sizes, minPhotoWidth }: Props) => {
   if (!image) {
     return null;
   }
@@ -15,12 +16,7 @@ const PhotoAlbumItem = ({ image, minPhotoWidth }: Props) => {
   return (
     <div className="m-1 rounded-1 " style={{ overflow: "hidden" }}>
       <a href={image.src}>
-        <Image
-          src={image.src}
-          alt={image.alt}
-          width={minPhotoWidth}
-          height={minPhotoWidth}
-        />
+        <Image src={image.src} alt={image.alt} fill sizes={sizes} />
       </a>
     </div>
   );
