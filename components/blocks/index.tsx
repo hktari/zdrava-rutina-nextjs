@@ -10,6 +10,7 @@ import WordCollageBlock from "./wordsCollage";
 import ContactBlock from "./contact";
 import AboutBlock from "./about";
 import VideoBlock from "./video";
+import GalleryBlock from "./gallery";
 
 type Prop = {
   blocks: Page["blocks"];
@@ -53,6 +54,8 @@ const Block = (block: PageBlocks) => {
       return <AboutBlock data={block} />;
     case "PageBlocksVideo":
       return <VideoBlock data={block} />;
+    case "PageBlocksImageGallery":
+      return <GalleryBlock data={block} />;
     default:
       return null;
   }

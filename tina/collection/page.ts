@@ -9,6 +9,7 @@ import { wordCollageBlockSchema } from "../../components/blocks/wordsCollage";
 import { contactBlockSchema } from "../../components/blocks/contact";
 import { aboutBlockSchema } from "../../components/blocks/about";
 import { videoBlockSchema } from "../../components/blocks/video";
+import { galleryBlockSchema } from "../../components/blocks/gallery";
 
 const Page: Collection = {
   label: "Pages",
@@ -53,6 +54,7 @@ const Page: Collection = {
         contactBlockSchema,
         aboutBlockSchema,
         videoBlockSchema,
+        galleryBlockSchema
       ],
     },
   ],
