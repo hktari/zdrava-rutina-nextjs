@@ -1,6 +1,11 @@
 ---
 title: masaze
 blocks:
+  - bannerImages:
+      - src: >-
+          https://res.cloudinary.com/div038xr5/image/upload/v1719944941/zdrava-rutina/massages/heroimage0.774931001563386131_qxqwf7.jpg
+        alt: woman relaxed lying
+    _template: banner
   - images:
       - src: >-
           https://res.cloudinary.com/div038xr5/image/upload/v1719944934/zdrava-rutina/massages/Relaxed-lady-receiving-a-massa_copy_qxudru.jpg
@@ -12,10 +17,5 @@ blocks:
           https://res.cloudinary.com/div038xr5/image/upload/v1719944937/zdrava-rutina/massages/WellstarFitness-GettyImages-1143400985_ga06ml.jpg
         alt: back pain
     _template: imageGallery
-  - bannerImages:
-      - src: >-
-          https://res.cloudinary.com/div038xr5/image/upload/v1719944941/zdrava-rutina/massages/heroimage0.774931001563386131_qxqwf7.jpg
-        alt: woman relaxed lying
-    _template: banner
 ---
 

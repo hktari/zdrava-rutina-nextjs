@@ -4,6 +4,7 @@ import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import { Template } from "tinacms";
 import { PageBlocksImageGallery } from "../../../tina/__generated__/types";
 import Section from "../../layout/section";
+import { tinaField } from "tinacms/dist/react";
 
 export type GalleryBlockProps = {
   data: PageBlocksImageGallery;
@@ -21,9 +22,10 @@ const GalleryBlock = ({ data }: GalleryBlockProps) => {
         <Masonry>
           {images.map((image) => (
             <PhotoAlbumItem
+              tinaField={tinaField(image!, "src")}
               sizes={"(max-width: 768px) 100vw, (max-width: 900px) 50vw, 33vw"}
               key={image?.src}
-              image={image}
+              image={image!}
               minPhotoWidth={432}
             />
           ))}
