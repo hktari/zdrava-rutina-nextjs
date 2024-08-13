@@ -5,7 +5,7 @@ import {
 } from "../../tina/__generated__/types";
 import { tinaField } from "tinacms/dist/react";
 import { Icon } from "../icon";
-import { Section } from "../layout/section";
+import Section from "../layout/section";
 import { Container } from "../layout/container";
 import { iconSchema } from "../../tina/fields/icon";
 

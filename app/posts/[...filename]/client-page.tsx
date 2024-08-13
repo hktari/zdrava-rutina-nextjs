@@ -2,7 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import { useLayout } from "../../../components/layout/layout-context";
-import { Section } from "../../../components/layout/section";
+import Section from "../../../components/layout/section";
 import { Container } from "../../../components/layout/container";
 import { tinaField, useTina } from "tinacms/dist/react";
 import { format } from "date-fns";

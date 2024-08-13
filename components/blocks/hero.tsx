@@ -5,7 +5,7 @@ import type { Template } from "tinacms";
 import { PageBlocksHero } from "../../tina/__generated__/types";
 import { tinaField } from "tinacms/dist/react";
 import Image from "next/image";
-import { Section } from "../layout/section";
+import Section from "../layout/section";
 import { Container } from "../layout/container";
 import { Actions } from "./actions";
 

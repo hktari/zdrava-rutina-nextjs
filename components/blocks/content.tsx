@@ -6,7 +6,7 @@ import type { Template } from "tinacms";
 import { PageBlocksContent } from "../../tina/__generated__/types";
 import { tinaField } from "tinacms/dist/react";
 import { Container } from "../layout/container";
-import { Section } from "../layout/section";
+import Section from "../layout/section";
 
 export const Content = ({ data }: { data: PageBlocksContent }) => {
   return (
