@@ -35,12 +35,20 @@ export default function BootstrapCarousel({
               alt={alt}
               width={466}
               height={450}
-              objectFit="cover"
+              style={{
+                objectFit: "cover",
+              }}
               priority
             />
           </div>
           <div className="d-none d-md-block" style={{ height: "100vh" }}>
-            <Image objectFit="cover" src={src} alt={alt} priority fill />
+            <Image
+              style={{ objectFit: "cover" }}
+              src={src}
+              alt={alt}
+              priority
+              fill
+            />
           </div>
         </Carousel.Item>
       ))}

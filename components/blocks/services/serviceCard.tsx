@@ -19,8 +19,7 @@ const ServiceCard = (serviceCardData: PageBlocksServicesItems) => {
             <Image
               fill
               sizes="(max-width: 768px) 100vw, 50vw"
-              objectFit="cover"
-              objectPosition="center"
+              style={{ objectFit: "cover", objectPosition: "center" }}
               src={image.src}
               alt={image.alt}
             />

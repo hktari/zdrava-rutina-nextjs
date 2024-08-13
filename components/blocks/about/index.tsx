@@ -32,7 +32,7 @@ const AboutBlock = ({ data }: { data: PageBlocksAbout }) => {
                 alt={avatar?.alt}
                 width={228}
                 height={228}
-                objectFit="cover"
+                style={{ objectFit: "cover" }}
               />
             </div>
 
