@@ -5,35 +5,48 @@ import { tinaField } from "tinacms/dist/react";
 import { PageBlocksBanner } from "../../../tina/__generated__/types";
 import Section from "../../layout/section";
 import BootstrapCarousel from "../../carousel/bootstrap";
-import styles from "./banner.module.css";
 import ScrollIndicator from "../../scrollIndicator";
 import Image from "next/image";
+import { cn } from "../../../lib/utils";
 
 type Props = {};
 
-const BannerImage = ({ src, alt }: { src: string; alt: string }) => {
-  return (
-    <Image
-      style={{ objectFit: "cover", objectPosition: "center" }}
-      src={src}
-      alt={alt}
-      priority
-      fill
-    />
-  );
-};
+const BannerImage =
+  ({ fullScreen }: { fullScreen: boolean }) =>
+  ({ src, alt }: { src: string; alt: string }) => {
+    return (
+      <div className={cn("")}>
+        <Image
+          className="c-banner__image"
+          style={{ objectFit: "cover", objectPosition: "center" }}
+          sizes={fullScreen ? "100vw" : "(max-width: 768px) 100vw, 50vw"}
+          src={src}
+          alt={alt}
+          priority
+          fill
+        />
+      </div>
+    );
+  };
 
 const BannerBlock = ({ data }: { data: PageBlocksBanner }) => {
   const DefaultCarouselIntervalSeconds = 2.5;
   const carouselIntervalMs =
     (data?.carouselIntervalSeconds || DefaultCarouselIntervalSeconds) * 1000;
 
+  const bannerImageComponent = BannerImage({ fullScreen: data.fullScreen });
+
   return (
     <Section noContainer={data.fullScreen} noSpacing={data.fullScreen}>
-      <>
+      <div
+        className={cn(
+          "c-banner",
+          data.fullScreen ? "c-banner--full-screen" : ""
+        )}
+      >
         {data.bannerImages && (
           <div
-            className={styles.container}
+            className={"c-banner__container"}
             data-tina-field={tinaField(data, "bannerImages")}
           >
             {" "}
@@ -42,14 +55,16 @@ const BannerBlock = ({ data }: { data: PageBlocksBanner }) => {
               indicators={false}
               controls={false}
               images={data.bannerImages}
-              ImageComponent={BannerImage}
+              ImageComponent={bannerImageComponent}
             />
-            <div className="d-none d-md-block">
-              <ScrollIndicator />
-            </div>
+            {data.fullScreen && (
+              <div className="d-none d-md-block">
+                <ScrollIndicator />
+              </div>
+            )}
           </div>
         )}
-      </>
+      </div>
     </Section>
   );
 };
