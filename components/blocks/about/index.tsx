@@ -7,13 +7,15 @@ import Image from "next/image";
 import { Template } from "tinacms";
 import { tinaField } from "tinacms/dist/react";
 import { PageBlocksAbout } from "../../../tina/__generated__/types";
+import { Container } from "../../layout/container";
+import { TinaMarkdown } from "tinacms/dist/rich-text";
 
 const AboutBlock = ({ data }: { data: PageBlocksAbout }) => {
   const { avatar, description, heading } = data;
 
   return (
     <Section id="about" className="c-about-section">
-      <>
+      <Container>
         {heading && (
           <div data-tina-field={tinaField(data, "heading")}>
             <H2>{heading}</H2>
@@ -30,20 +32,22 @@ const AboutBlock = ({ data }: { data: PageBlocksAbout }) => {
                 alt={avatar?.alt}
                 width={228}
                 height={228}
-                objectFit="contain"
+                objectFit="cover"
               />
             </div>
 
-            <motion.p
-              data-tina-field={tinaField(data, "description")}
-              style={{ textAlign: "justify" }}
-              {...fadeInAnimationProps}
-            >
-              {description}
-            </motion.p>
+            {description && (
+              <motion.div
+                data-tina-field={tinaField(data, "description")}
+                style={{ textAlign: "justify" }}
+                {...fadeInAnimationProps}
+              >
+                <TinaMarkdown content={description} />
+              </motion.div>
+            )}
           </motion.div>
         )}
-      </>
+      </Container>
     </Section>
   );
 };
