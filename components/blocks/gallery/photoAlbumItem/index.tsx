@@ -14,9 +14,18 @@ const PhotoAlbumItem = ({ image, sizes, minPhotoWidth }: Props) => {
   }
 
   return (
-    <div className="m-1 rounded-1 " style={{ overflow: "hidden" }}>
+    <div
+      className="m-1 rounded-1 position-relative "
+      style={{ overflow: "hidden", minHeight: "350px" }}
+    >
       <a href={image.src}>
-        <Image src={image.src} alt={image.alt} fill sizes={sizes} />
+        <Image
+          src={image.src}
+          alt={image.alt}
+          fill
+          sizes={sizes}
+          style={{ objectFit: "contain" }}
+        />
       </a>
     </div>
   );
