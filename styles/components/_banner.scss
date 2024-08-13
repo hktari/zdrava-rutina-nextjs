@@ -2,14 +2,20 @@
 }
 
 .c-banner__container .c-banner__image {
-  height: 450px;
+  height: 250px;
   position: relative;
 }
 
 @media (min-width: 768px) {
-  .c-banner--full-screen {
+  .c-banner {
     .c-banner__image {
-      height: 100vh;
+      height: 745px;
+    }
+
+    &.c-banner--full-screen {
+      .c-banner__image {
+        height: 100vh;
+      }
     }
   }
 }

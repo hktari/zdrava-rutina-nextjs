@@ -19,7 +19,8 @@ const BannerImage =
         <Image
           className=""
           style={{ objectFit: "cover", objectPosition: "center" }}
-          sizes={fullScreen ? "100vw" : "(max-width: 768px) 100vw, 50vw"}
+          sizes={fullScreen ? "100vw" : "(max-width: 768px) 100vw, 80vw"}
+          quality={100}
           src={src}
           alt={alt}
           priority
