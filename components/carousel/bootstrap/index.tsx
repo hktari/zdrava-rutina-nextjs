@@ -7,17 +7,30 @@ export default function BootstrapCarousel({
   images,
   intervalMs = 2500,
   indicators = true,
+  ImageComponent,
   controls = false,
 }: {
   indicators?: boolean;
   intervalMs?: number;
   controls?: boolean;
+  ImageComponent?: React.FC<{ src: string; alt: string }>;
   images: PageBlocksBannerBannerImages[];
 }) {
   const [index, setIndex] = useState(0);
   const handleSelect = (selectedIndex, e) => {
     setIndex(selectedIndex);
   };
+
+  const defaultImageComponent = ({ src, alt }) => (
+    <Image
+      style={{ objectFit: "cover", objectPosition: "center" }}
+      src={src}
+      alt={alt}
+      priority
+      fill
+    />
+  );
+
   return (
     <Carousel
       activeIndex={index}
@@ -29,27 +42,11 @@ export default function BootstrapCarousel({
     >
       {images.map(({ src, alt }, index) => (
         <Carousel.Item key={`${alt}-${src}-${index}`} interval={500}>
-          <div className="d-md-none">
-            <Image
-              src={src}
-              alt={alt}
-              width={466}
-              height={450}
-              style={{
-                objectFit: "cover",
-              }}
-              priority
-            />
-          </div>
-          <div className="d-none d-md-block" style={{ height: "100vh" }}>
-            <Image
-              style={{ objectFit: "cover" }}
-              src={src}
-              alt={alt}
-              priority
-              fill
-            />
-          </div>
+          {ImageComponent ? (
+            <ImageComponent src={src} alt={alt} />
+          ) : (
+            defaultImageComponent({ src, alt })
+          )}
         </Carousel.Item>
       ))}
     </Carousel>
