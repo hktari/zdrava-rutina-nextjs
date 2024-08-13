@@ -15,9 +15,9 @@ const BannerImage =
   ({ fullScreen }: { fullScreen: boolean }) =>
   ({ src, alt }: { src: string; alt: string }) => {
     return (
-      <div className={cn("")}>
+      <div className={cn("c-banner__image position-relative")}>
         <Image
-          className="c-banner__image"
+          className=""
           style={{ objectFit: "cover", objectPosition: "center" }}
           sizes={fullScreen ? "100vw" : "(max-width: 768px) 100vw, 50vw"}
           src={src}
@@ -37,7 +37,7 @@ const BannerBlock = ({ data }: { data: PageBlocksBanner }) => {
   const bannerImageComponent = BannerImage({ fullScreen: data.fullScreen });
 
   return (
-    <Section noContainer={data.fullScreen} noSpacing={data.fullScreen}>
+    <Section noContainer={data.fullScreen} noSpacing className="px-0">
       <div
         className={cn(
           "c-banner",

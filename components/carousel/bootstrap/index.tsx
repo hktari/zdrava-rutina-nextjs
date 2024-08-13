@@ -21,7 +21,7 @@ export default function BootstrapCarousel({
     setIndex(selectedIndex);
   };
 
-  const defaultImageComponent = ({ src, alt }) => (
+  const DefaultImageComponent = ({ src, alt }) => (
     <Image
       style={{ objectFit: "cover", objectPosition: "center" }}
       src={src}
@@ -34,18 +34,17 @@ export default function BootstrapCarousel({
   return (
     <Carousel
       activeIndex={index}
-      interval={intervalMs}
       fade={true}
       onSelect={handleSelect}
       indicators={indicators}
       controls={controls}
     >
       {images.map(({ src, alt }, index) => (
-        <Carousel.Item key={`${alt}-${src}-${index}`} interval={500}>
+        <Carousel.Item key={`${alt}-${src}-${index}`} interval={intervalMs}>
           {ImageComponent ? (
             <ImageComponent src={src} alt={alt} />
           ) : (
-            defaultImageComponent({ src, alt })
+            <DefaultImageComponent src={src} alt={alt} />
           )}
         </Carousel.Item>
       ))}

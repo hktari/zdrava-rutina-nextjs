@@ -1,7 +1,8 @@
 ---
 title: Prva Stran
 blocks:
-  - bannerImages:
+  - fullScreen: true
+    bannerImages:
       - src: /uploads/hatha-joga.jpg
         alt: woman doing hatha joga
       - src: /uploads/sea-bend-backward.jpeg
@@ -10,21 +11,21 @@ blocks:
   - heading: O meni
     description: |
       Lorem
-       ipsum dolor sit amet consectetur adipisicing elit. Soluta blanditiis 
-      delectus aliquam veritatis? Beatae ducimus dolore labore, ad optio quo 
-      sed soluta repellendus saepe velit aperiam ex hic neque, perspiciatis 
-      vel maiores iure molestias quis harum corporis praesentium minus fugit. 
+      ipsum dolor sit amet consectetur adipisicing elit. Soluta blanditiis
+      delectus aliquam veritatis? Beatae ducimus dolore labore, ad optio quo
+      sed soluta repellendus saepe velit aperiam ex hic neque, perspiciatis
+      vel maiores iure molestias quis harum corporis praesentium minus fugit.
       Fugit veniam ad nisi, cumque sed eaque illum accusantium quibusdam iusto
-       nulla minima cupiditate velit aperiam, dolores suscipit vel odio 
-      repudiandae fuga culpa eum sunt. Sequi incidunt ratione nam quaerat 
-      maxime aperiam a aliquid, et dolore quo impedit, quod ad eaque porro 
-      accusantium nostrum laboriosam corporis quam laborum. Porro quod odit 
-      voluptates dolor provident autem vero in quam laboriosam! Ex, illum 
-      libero? Ipsam, consequatur nobis quo nisi explicabo labore veritatis ex 
-      quidem dicta beatae fugiat atque eveniet unde dolore saepe quia iusto 
-      ut, dignissimos reiciendis maxime ab! Nobis error et officiis. Esse 
+      nulla minima cupiditate velit aperiam, dolores suscipit vel odio
+      repudiandae fuga culpa eum sunt. Sequi incidunt ratione nam quaerat
+      maxime aperiam a aliquid, et dolore quo impedit, quod ad eaque porro
+      accusantium nostrum laboriosam corporis quam laborum. Porro quod odit
+      voluptates dolor provident autem vero in quam laboriosam! Ex, illum
+      libero? Ipsam, consequatur nobis quo nisi explicabo labore veritatis ex
+      quidem dicta beatae fugiat atque eveniet unde dolore saepe quia iusto
+      ut, dignissimos reiciendis maxime ab! Nobis error et officiis. Esse
       earum adipisci minima, sint rerum, explicabo molestias expedita suscipit
-       officiis ipsa deleniti, tempore itaque dolorem ad sit aut provident 
+      officiis ipsa deleniti, tempore itaque dolorem ad sit aut provident
       officia.
     avatar:
       src: /uploads/avatar.jpg
