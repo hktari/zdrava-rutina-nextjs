@@ -12,9 +12,9 @@ export default function Header() {
   const { data } = useTina(pageData) as { data: PageQuery };
 
   return (
-    <div className={`c-header`}>
+    <>
       <FixedNavbar title={data.page.title} className="d-none d-md-block" />
       <StickyNavbar title={data.page.title} className="d-md-none" />
-    </div>
+    </>
   );
 }
