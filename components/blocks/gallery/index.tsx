@@ -19,7 +19,7 @@ const GalleryBlock = ({ data }: GalleryBlockProps) => {
   }
 
   return (
-    <div>
+    <Section noContainer className="px-3">
       <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 768: 2, 900: 3 }}>
         <Masonry>
           {images.map((image) => (
@@ -33,7 +33,7 @@ const GalleryBlock = ({ data }: GalleryBlockProps) => {
           ))}
         </Masonry>
       </ResponsiveMasonry>
-    </div>
+    </Section>
   );
 };
 
