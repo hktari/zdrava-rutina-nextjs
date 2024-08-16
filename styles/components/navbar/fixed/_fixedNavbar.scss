@@ -1,8 +1,8 @@
-// @import "bootstrap";
 
 .c-fixed-navbar.navbar {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
+  z-index: $navbar-z-index;
 }
