@@ -1,26 +1,7 @@
+$font-family-base: var(--font-open-sans);
 
-
-$font-family-base: "Open Sans", system-ui,
-  // Safari for macOS and iOS (San Francisco)
-  -apple-system,
-  // Windows
-  "Segoe UI",
-  // Android
-  Roboto,
-  // older macOS and iOS
-  "Helvetica Neue" // Linux
-  "Noto Sans",
-  "Liberation Sans",
-  // Basic web fallback
-  Arial,
-  // Sans serif fallback
-  sans-serif,
-  // Emoji fonts
-  "Apple Color Emoji",
-  "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-
-$headings-font-family: Raleway, sans-serif;
+$headings-font-family: var(--font-raleway);
 
 $headings-font-weight: 400;
 
-$word-collage-font-family: Amatic SC, sans-serif;
+$word-collage-font-family: var(--font-amatic-sc);

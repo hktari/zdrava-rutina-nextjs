@@ -13,21 +13,24 @@ const raleway = Raleway({
   weight: ["400", "600", "700"],
 });
 
-const nunito = Open_Sans({
+const openSans = Open_Sans({
   subsets: ["latin"],
   variable: "--font-open-sans",
   weight: ["400", "600", "700"],
 });
 
-const lato = Amatic_SC({
+const amaticSC = Amatic_SC({
   subsets: ["latin"],
   variable: "--font-amatic-sc",
   weight: ["400", "700"],
 });
 
+const fonts = [raleway, openSans, amaticSC];
+
+// TODO: set metadata
 export const metadata: Metadata = {
   title: "Tina",
-  description: "Tina Cloud Starter",
+  description: "",
 };
 
 export default async function RootLayout({
@@ -42,7 +45,12 @@ export default async function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={cn("min-h-screen flex flex-col antialiased")}>
+      <body
+        className={cn(
+          "min-h-screen flex flex-col antialiased",
+          fonts.map((font) => font.variable)
+        )}
+      >
         {children}
       </body>
     </html>
