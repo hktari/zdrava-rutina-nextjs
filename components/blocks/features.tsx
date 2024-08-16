@@ -6,8 +6,8 @@ import {
 import { tinaField } from "tinacms/dist/react";
 import { Icon } from "../icon";
 import Section from "../layout/section";
-import { Container } from "../layout/container";
 import { iconSchema } from "../../tina/fields/icon";
+import { Container } from "react-bootstrap";
 
 export const Feature = ({
   featuresColor,
@@ -60,7 +60,7 @@ export const Features = ({ data }: { data: PageBlocksFeatures }) => {
           data.items.map(function (block, i) {
             return <Feature featuresColor={data.color} key={i} data={block} />;
           })}
-      </Container>
+      </Containr>
     </Section>
   );
 };

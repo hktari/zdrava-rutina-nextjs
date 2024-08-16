@@ -5,20 +5,13 @@ import { TinaMarkdown } from "tinacms/dist/rich-text";
 import type { Template } from "tinacms";
 import { PageBlocksContent } from "../../tina/__generated__/types";
 import { tinaField } from "tinacms/dist/react";
-import { Container } from "../layout/container";
 import Section from "../layout/section";
+import { Container } from "react-bootstrap";
 
 export const Content = ({ data }: { data: PageBlocksContent }) => {
   return (
-    <Section color={data.color}>
-      <Container
-        className={`prose prose-lg ${
-          data.color === "primary" ? `prose-primary` : `dark:prose-dark`
-        }`}
-        data-tina-field={tinaField(data, "body")}
-        size="large"
-        width="medium"
-      >
+    <Section>
+      <Container data-tina-field={tinaField(data, "body")}>
         <TinaMarkdown content={data.body} />
       </Container>
     </Section>

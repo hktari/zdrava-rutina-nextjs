@@ -3,12 +3,12 @@ import React from "react";
 import Image from "next/image";
 import { useLayout } from "../../../components/layout/layout-context";
 import Section from "../../../components/layout/section";
-import { Container } from "../../../components/layout/container";
 import { tinaField, useTina } from "tinacms/dist/react";
 import { format } from "date-fns";
 import { PostQuery } from "../../../tina/__generated__/types";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
 import { components } from "../../../components/mdx-components";
+import { Container } from "react-bootstrap";
 
 const titleColorClasses = {
   blue: "from-blue-400 to-blue-600 dark:from-blue-300 dark:to-blue-500",
@@ -45,7 +45,7 @@ export default function PostClientPage(props: ClientPostProps) {
 
   return (
     <Section className="flex-1">
-      <Container width="small" className={`flex-1 pb-2`} size="large">
+      <Container>
         <h2
           data-tina-field={tinaField(post, "title")}
           className={`w-full relative	mb-8 text-6xl font-extrabold tracking-normal text-center title-font`}
@@ -117,7 +117,7 @@ export default function PostClientPage(props: ClientPostProps) {
           </div>
         </div>
       )}
-      <Container className={`flex-1 pt-4`} width="small" size="large">
+      <Container>
         <div
           data-tina-field={tinaField(post, "_body")}
           className="prose dark:prose-dark w-full max-w-none"

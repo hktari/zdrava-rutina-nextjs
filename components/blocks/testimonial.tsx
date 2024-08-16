@@ -3,12 +3,12 @@ import type { Template } from "tinacms";
 import { PageBlocksTestimonial } from "../../tina/__generated__/types";
 import { tinaField } from "tinacms/dist/react";
 import Section from "../layout/section";
-import { Container } from "../layout/container";
+import { Container } from "react-bootstrap";
 
 export const Testimonial = ({ data }: { data: PageBlocksTestimonial }) => {
   return (
     <Section color={data.color}>
-      <Container size="large">
+      <Container>
         <blockquote>
           <div
             className={`relative z-10 max-w-3xl mx-auto text-4xl lg:text-5xl font-bold tracking-normal text-center title-font ${
