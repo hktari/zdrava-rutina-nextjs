@@ -8,7 +8,7 @@ const ServiceCard = (serviceCardData: PageBlocksServicesItems) => {
   const { link, description, image, title } = serviceCardData;
 
   return (
-    <Link href={link}>
+    <Link href={link} className="text-decoration-none">
       <div className="c-service-card card border-0 border-none p-0">
         {image && (
           <div
@@ -25,15 +25,15 @@ const ServiceCard = (serviceCardData: PageBlocksServicesItems) => {
             />
           </div>
         )}
-        <div className="card-body">
+        <div className="card-body text-center">
           <h5
             data-tina-field={tinaField(serviceCardData, "title")}
-            className="c-service-card__title card-title"
+            className="c-service-card__title card-title text-decoration-none"
           >
             {title}
           </h5>
           <p
-            className="card-text opacity-75"
+            className="card-text opacity-75 text-decoration-none"
             data-tina-field={tinaField(serviceCardData, "description")}
           >
             {description}
