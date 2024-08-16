@@ -8,34 +8,30 @@ import BootstrapCarousel from "../../carousel/bootstrap";
 import ScrollIndicator from "../../scrollIndicator";
 import Image from "next/image";
 import { cn } from "../../../lib/utils";
+import BannerImage, { BannerImageProps } from "./bannerImage";
 
 type Props = {};
-
-const BannerImage =
-  ({ fullScreen }: { fullScreen: boolean }) =>
-  ({ src, alt }: { src: string; alt: string }) => {
-    return (
-      <div className={cn("c-banner__image position-relative")}>
-        <Image
-          className=""
-          style={{ objectFit: "cover", objectPosition: "center" }}
-          sizes={fullScreen ? "100vw" : "(max-width: 768px) 100vw, 80vw"}
-          quality={100}
-          src={src}
-          alt={alt}
-          priority
-          fill
-        />
-      </div>
-    );
-  };
 
 const BannerBlock = ({ data }: { data: PageBlocksBanner }) => {
   const DefaultCarouselIntervalSeconds = 2.5;
   const carouselIntervalMs =
     (data?.carouselIntervalSeconds || DefaultCarouselIntervalSeconds) * 1000;
 
-  const bannerImageComponent = BannerImage({ fullScreen: data.fullScreen });
+  const fullScreen = data.fullScreen || false;
+
+  const bannerImageSizes = fullScreen
+    ? "100vw"
+    : "(max-width: 768px) 100vw, 80vw";
+
+  const bannerImages: BannerImageProps[] =
+    data?.bannerImages
+      // TODO: Fix this type issue
+      ?.filter((img) => img && img?.src && img?.alt)
+      .map((img) => ({
+        src: img.src!,
+        alt: img.alt!,
+        sizes: bannerImageSizes,
+      })) || [];
 
   return (
     <Section noContainer={data.fullScreen} noSpacing className="px-0">
@@ -45,7 +41,7 @@ const BannerBlock = ({ data }: { data: PageBlocksBanner }) => {
           data.fullScreen ? "c-banner--full-screen" : ""
         )}
       >
-        {data.bannerImages && (
+        {bannerImages && (
           <div
             className={"c-banner__container"}
             data-tina-field={tinaField(data, "bannerImages")}
@@ -55,8 +51,8 @@ const BannerBlock = ({ data }: { data: PageBlocksBanner }) => {
               intervalMs={carouselIntervalMs}
               indicators={false}
               controls={false}
-              images={data.bannerImages}
-              ImageComponent={bannerImageComponent}
+              images={bannerImages}
+              ImageComponent={BannerImage}
             />
             {data.fullScreen && (
               <div className="d-none d-md-block">
