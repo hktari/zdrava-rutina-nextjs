@@ -44,18 +44,20 @@ const WordCollageBlock = ({ data }) => {
 
   return (
     <Section id="wordsCollage" className="my-md-4 my-2">
-      <div className="c-word-collage d-grid gap-3">
-        {words?.map((word, idx) => (
-          <WordCollageItem
-            key={`${word}-${idx}`}
-            idx={idx}
-            word={word}
-            initialTranslateX={
-              idx % 2 === 0 ? "clamp(-50vw, 500px)" : "clamp(50vw, 500px)"
-            }
-          />
-        ))}
-      </div>
+      <Container>
+        <div className="c-word-collage d-grid gap-3">
+          {words?.map((word, idx) => (
+            <WordCollageItem
+              key={`${word}-${idx}`}
+              idx={idx}
+              word={word}
+              initialTranslateX={
+                idx % 2 === 0 ? "clamp(-50vw, 500px)" : "clamp(50vw, 500px)"
+              }
+            />
+          ))}
+        </div>
+      </Container>
     </Section>
   );
 };
@@ -63,4 +65,5 @@ const WordCollageBlock = ({ data }) => {
 export default WordCollageBlock;
 
 import schema from "./schema";
+import { Container } from "react-bootstrap";
 export const wordCollageBlockSchema = { ...schema };

@@ -20,11 +20,9 @@ const Section = ({
   return (
     <section
       id={id}
-      className={`c-section ${noSpacing ? "" : "pt-4"} ${
-        noContainer ? "" : "container"
-      } ${className ? className : ""} ${
-        alternativeStyle ? `c-section--alternative` : ""
-      }`}
+      className={`c-section ${noSpacing ? "" : "mt-4 mt-md-5"} ${
+        className ? className : ""
+      } ${alternativeStyle ? `c-section--alternative py-3` : ""}`}
     >
       {children}
     </section>

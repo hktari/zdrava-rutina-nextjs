@@ -7,8 +7,8 @@ import Image from "next/image";
 import { Template } from "tinacms";
 import { tinaField } from "tinacms/dist/react";
 import { PageBlocksAbout } from "../../../tina/__generated__/types";
-import { Container } from "../../layout/container";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
+import { Container } from "react-bootstrap";
 
 const AboutBlock = ({ data }: { data: PageBlocksAbout }) => {
   const { avatar, description, heading } = data;

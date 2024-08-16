@@ -1,7 +1,7 @@
 import React from "react";
 import { Template } from "tinacms";
 import Section from "../layout/section";
-import { Container } from "../layout/container";
+import { Container } from "react-bootstrap";
 
 type VideoBlockProps = {
   data: {

@@ -1,5 +1,5 @@
 ---
-title: Prva Stran
+title: Zdrava Rutina
 blocks:
   - fullScreen: true
     bannerImages:

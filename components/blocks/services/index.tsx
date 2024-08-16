@@ -13,8 +13,8 @@ import ServicesCardGroup from "./servicesCardGroup";
 
 export const ServicesBlock = ({ data }: { data: PageBlocksServices }) => {
   return (
-    <Section>
-      <Container className="bg-danger">
+    <Section alternativeStyle>
+      <Container>
         {data.title && (
           <h2 data-tina-field={tinaField(data, "title")}>{data.title}</h2>
         )}

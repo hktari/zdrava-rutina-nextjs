@@ -9,20 +9,16 @@
     "color": "default",
     "nav": [
       {
-        "href": "",
+        "href": "/#services",
+        "label": "Storitve"
+      },
+      {
+        "href": "home",
         "label": "Home"
       },
       {
-        "href": "osebno-trenerstvo",
-        "label": "Osebno Trenerstvo"
-      },
-      {
-        "href": "about",
-        "label": "About"
-      },
-      {
-        "href": "posts",
-        "label": "Blog"
+        "href": "/#contact",
+        "label": "Kontakt"
       }
     ]
   },

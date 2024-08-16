@@ -19,7 +19,7 @@ const GalleryBlock = ({ data }: GalleryBlockProps) => {
   }
 
   return (
-    <Section noContainer className="px-md-3">
+    <Section className="px-md-3">
       <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 768: 2, 900: 3 }}>
         <Masonry>
           {images.map((image) => (
