@@ -45,14 +45,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={cn(
-          "min-h-screen flex flex-col antialiased",
-          fonts.map((font) => font.variable)
-        )}
-      >
-        {children}
-      </body>
+      <body className={cn(fonts.map((font) => font.variable))}>{children}</body>
     </html>
   );
 }
