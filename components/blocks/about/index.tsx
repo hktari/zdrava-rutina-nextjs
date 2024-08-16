@@ -25,7 +25,8 @@ const AboutBlock = ({ data }: { data: PageBlocksAbout }) => {
           <motion.div {...fadeInAnimationProps}>
             <div
               data-tina-field={tinaField(data, "avatar")}
-              className="c-about-section--avatar float-start me-2 rounded"
+              className="c-about-section--avatar float-start me-2 me-md-4 rounded"
+              style={{ overflow: "hidden" }}
             >
               <Image
                 src={avatar?.src}
