@@ -1,28 +1,28 @@
 import "../styles/main.scss";
 
-
 import React from "react";
 import { ThemeProvider } from "../components/theme-provider";
-import { Inter as FontSans, Lato, Nunito } from "next/font/google";
+import { Raleway, Open_Sans, Amatic_SC } from "next/font/google";
 import { cn } from "../lib/utils";
 import { Metadata } from "next";
 import client from "../tina/__generated__/client";
 
-
-const fontSans = FontSans({
+const raleway = Raleway({
   subsets: ["latin"],
-  variable: "--font-sans",
+  variable: "--font-raleway",
+  weight: ["400", "600", "700"],
 });
 
-const nunito = Nunito({
+const nunito = Open_Sans({
   subsets: ["latin"],
-  variable: "--font-nunito",
+  variable: "--font-open-sans",
+  weight: ["400", "600", "700"],
 });
 
-const lato = Lato({
+const lato = Amatic_SC({
   subsets: ["latin"],
-  variable: "--font-lato",
-  weight: "400",
+  variable: "--font-amatic-sc",
+  weight: ["400", "700"],
 });
 
 export const metadata: Metadata = {
@@ -40,32 +40,10 @@ export default async function RootLayout({
   });
   const global = globalQuery.data.global;
 
-  const selectFont = (fontName: string) => {
-    switch (fontName) {
-      case "nunito":
-        return `font-nunito ${nunito.variable}`;
-      case "lato":
-        return `font-lato ${lato.variable}`;
-      case "sans":
-      default:
-        return `font-sans ${fontSans.variable} `;
-    }
-  };
-  const fontVariable = selectFont(global.theme.font);
-
   return (
     <html lang="en" suppressHydrationWarning>
-      <body
-        className={cn("min-h-screen flex flex-col antialiased", fontVariable)}
-      >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          disableTransitionOnChange
-          forcedTheme={global.theme.darkMode}
-        >
-          {children}
-        </ThemeProvider>
+      <body className={cn("min-h-screen flex flex-col antialiased")}>
+        {children}
       </body>
     </html>
   );
