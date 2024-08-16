@@ -1,3 +1,5 @@
+"use client";
+
 import React, { useCallback, useState } from "react";
 import PhotoAlbumItem from "./photoAlbumItem";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
@@ -10,6 +12,12 @@ export type GalleryBlockProps = {
   data: PageBlocksImageGallery;
 };
 
+const columnsBp = {
+  350: 2,
+  750: 3,
+  992: 4,
+};
+
 const GalleryBlock = ({ data }: GalleryBlockProps) => {
   const images = data.images;
   if (!images) {
@@ -17,8 +25,9 @@ const GalleryBlock = ({ data }: GalleryBlockProps) => {
   }
 
   return (
-    <Section>
-      <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 768: 2, 900: 3 }}>
+    <div>
+      <ResponsiveMasonry columnsCountBreakPoints={columnsBp}>
+        {" "}
         <Masonry>
           {images.map((image) => (
             <PhotoAlbumItem
@@ -31,7 +40,7 @@ const GalleryBlock = ({ data }: GalleryBlockProps) => {
           ))}
         </Masonry>
       </ResponsiveMasonry>
-    </Section>
+    </div>
   );
 };
 
