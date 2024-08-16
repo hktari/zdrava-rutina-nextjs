@@ -6,16 +6,24 @@
   position: relative;
 }
 
-@media (min-width: 768px) {
+@include media-breakpoint-up(md) {
   .c-banner {
     .c-banner__image {
-      height: 745px;
+      height: 406px;
     }
 
     &.c-banner--full-screen {
       .c-banner__image {
         height: 100vh;
       }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .c-banner {
+    .c-banner__image {
+      height: 745px;
     }
   }
 }
