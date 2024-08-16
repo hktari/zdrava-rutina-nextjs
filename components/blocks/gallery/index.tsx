@@ -12,12 +12,6 @@ export type GalleryBlockProps = {
   data: PageBlocksImageGallery;
 };
 
-const columnsBp = {
-  350: 2,
-  750: 3,
-  992: 4,
-};
-
 const GalleryBlock = ({ data }: GalleryBlockProps) => {
   const images = data.images;
   if (!images) {
@@ -26,8 +20,7 @@ const GalleryBlock = ({ data }: GalleryBlockProps) => {
 
   return (
     <div>
-      <ResponsiveMasonry columnsCountBreakPoints={columnsBp}>
-        {" "}
+      <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 768: 2, 900: 3 }}>
         <Masonry>
           {images.map((image) => (
             <PhotoAlbumItem
@@ -46,15 +39,28 @@ const GalleryBlock = ({ data }: GalleryBlockProps) => {
 
 export default GalleryBlock;
 
+const defaultImageItem = {
+  src: "/uploads/hatha-joga.jpg",
+  alt: "hatha joga",
+};
+
 export const galleryBlockSchema: Template = {
   name: "imageGallery",
   label: "Galerija slika",
+  ui: {
+    defaultItem: {
+      images: [{ ...defaultImageItem }],
+    },
+  },
   fields: [
     {
       label: "Slike",
       name: "images",
       type: "object",
       list: true,
+      ui: {
+        defaultItem: { ...defaultImageItem },
+      },
       fields: [
         {
           label: "Slika",
