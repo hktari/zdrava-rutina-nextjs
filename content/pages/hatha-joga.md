@@ -34,6 +34,7 @@ blocks:
       molestiae.
     _template: content
   - title: Sloni
+    showControls: true
     url: >-
       https://res.cloudinary.com/div038xr5/video/upload/v1716533955/samples/elephants.mp4
     _template: video

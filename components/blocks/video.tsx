@@ -34,6 +34,14 @@ export default VideoBlock;
 export const videoBlockSchema: Template = {
   label: "Video",
   name: "video",
+  ui: {
+    defaultItem: {
+      title: "Video",
+      url: "https://youtu.be/FwOoC0QdeG4?si=IJx6sSwMQ1RbZKcI",
+      autoPlay: false,
+      showControls: true,
+    },
+  },
   fields: [
     {
       type: "string",
