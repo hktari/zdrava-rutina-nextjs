@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { Carousel } from "react-bootstrap";
 import { PageBlocksBannerBannerImages } from "../../../tina/__generated__/types";
 import Image from "next/image";
