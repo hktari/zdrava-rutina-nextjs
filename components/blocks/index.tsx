@@ -34,14 +34,8 @@ export const Blocks = ({ blocks }: Prop) => {
 
 const Block = (block: PageBlocks) => {
   switch (block.__typename) {
-    case "PageBlocksHero":
-      return <Hero data={block} />;
     case "PageBlocksContent":
       return <Content data={block} />;
-    case "PageBlocksFeatures":
-      return <Features data={block} />;
-    case "PageBlocksTestimonial":
-      return <Testimonial data={block} />;
     case "PageBlocksBanner":
       return <BannerBlock data={block} />;
     case "PageBlocksServices":
