@@ -23,7 +23,7 @@ const ContactInfo = ({ icon, href, title, tinaField }: ContactInfoProps) => {
   return (
     <div className="c-contact-info" data-tina-field={tinaField}>
       <div className="c-contact-info__icon d-none d-md-flex position-relative justify-content-between align-items-center mt-3 align-self-stretch">
-        <div className="fs-2">{icon}</div>
+        <div className="fs-2 d-flex justify-content-center align-items-center">{icon}</div>
         <a
           className="flex-grow-1 stretched-link fs-4 ms-3 d-none d-md-inline text-start"
           href={href}
@@ -32,7 +32,7 @@ const ContactInfo = ({ icon, href, title, tinaField }: ContactInfoProps) => {
         </a>
       </div>
 
-      <a className="c-contact-info__icon d-inline d-md-none fs-4" href={href}>
+      <a className="c-contact-info__icon d-inline d-md-none display-1" href={href}>
         {icon}
       </a>
     </div>
