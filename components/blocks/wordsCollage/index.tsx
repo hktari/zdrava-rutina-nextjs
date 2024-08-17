@@ -16,7 +16,7 @@ const WordCollageItem = ({
   idx,
 }: WordCollageItemProps) => {
   const { text, fontSize, xOffset, fontStyle, fontWeight } = word;
-  const ref = useRef();
+  const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
   return (
@@ -31,8 +31,8 @@ const WordCollageItem = ({
           : `translateX(${initialTranslateX}) scale(0.1)`,
         opacity: isInView ? 1 : 0,
         transition: `all 1.3s ease ${idx * 0.25 + 0.5}s`,
-        fontStyle: fontStyle,
-        fontWeight: fontWeight,
+        fontStyle: fontStyle || "normal",
+        fontWeight: fontWeight || "400",
       }}
     >
       {text}

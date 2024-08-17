@@ -2,18 +2,10 @@ import React from "react";
 import { Template } from "tinacms";
 import Section from "../layout/section";
 import { Container } from "react-bootstrap";
+import { PageBlocksVideo } from "../../tina/__generated__/types";
 
-type VideoBlockProps = {
-  data: {
-    title: string;
-    url: string;
-    autoPlay: boolean;
-    showControls: boolean;
-  };
-};
-
-const VideoBlock = (props: VideoBlockProps) => {
-  const { title, url, autoPlay, showControls } = props.data;
+const VideoBlock = ({ data }: { data: PageBlocksVideo }) => {
+  const { title, url, autoPlay, showControls } = data;
   return (
     <Section>
       <Container>
@@ -46,21 +38,25 @@ export const videoBlockSchema: Template = {
     {
       type: "string",
       name: "title",
+      required: true,
       label: "Naslov",
     },
     {
       type: "boolean",
       name: "showControls",
+      required: true,
       label: "Prikaži kontrole",
     },
     {
       type: "string",
       name: "url",
+      required: true,
       label: "URL",
     },
     {
       type: "boolean",
       name: "autoPlay",
+      required: true,
       label: "Predvajaj samodejno",
     },
   ],

@@ -23,7 +23,9 @@ const ContactInfo = ({ icon, href, title, tinaField }: ContactInfoProps) => {
   return (
     <div className="c-contact-info" data-tina-field={tinaField}>
       <div className="c-contact-info__icon d-none d-md-flex position-relative justify-content-between align-items-center mt-3 align-self-stretch">
-        <div className="fs-2 d-flex justify-content-center align-items-center">{icon}</div>
+        <div className="fs-2 d-flex justify-content-center align-items-center">
+          {icon}
+        </div>
         <a
           className="flex-grow-1 stretched-link fs-4 ms-3 d-none d-md-inline text-start"
           href={href}
@@ -32,7 +34,10 @@ const ContactInfo = ({ icon, href, title, tinaField }: ContactInfoProps) => {
         </a>
       </div>
 
-      <a className="c-contact-info__icon d-inline d-md-none display-1" href={href}>
+      <a
+        className="c-contact-info__icon d-inline d-md-none display-1"
+        href={href}
+      >
         {icon}
       </a>
     </div>
@@ -41,7 +46,8 @@ const ContactInfo = ({ icon, href, title, tinaField }: ContactInfoProps) => {
 
 const ContactBlock = ({ data }: { data: PageBlocksContact }) => {
   const { title } = data;
-  const { email, telephone, socialMedia } = data.contactItems || {};
+  const contactItems = data.contactItems || {};
+  const { email, telephone, socialMedia } = contactItems || {};
   const { instagram, facebook, tiktok } = socialMedia || {};
 
   return (
@@ -60,40 +66,45 @@ const ContactBlock = ({ data }: { data: PageBlocksContact }) => {
                 <div className="d-flex justify-content-evenly align-items-center flex-md-column">
                   {email && (
                     <ContactInfo
-                      tinaField={tinaField(data.contactItems, "email")}
+                      tinaField={tinaField(contactItems, "email")}
                       icon={<BiEnvelope />}
                       href={`mailto:${email}`}
                       title={email}
                     />
                   )}
 
-                  {instagram && (
-                    <ContactInfo
-                      tinaField={tinaField(socialMedia, "instagram")}
-                      icon={<BiLogoInstagram />}
-                      href={`${socialMedia?.instagram}`}
-                      title={getInstagramUsername(instagram)}
-                    />
+                  {socialMedia && (
+                    <>
+                      {instagram && (
+                        <ContactInfo
+                          tinaField={tinaField(socialMedia, "instagram")}
+                          icon={<BiLogoInstagram />}
+                          href={`${socialMedia?.instagram}`}
+                          title={getInstagramUsername(instagram)}
+                        />
+                      )}
+                      {facebook && (
+                        <ContactInfo
+                          tinaField={tinaField(socialMedia, "facebook")}
+                          icon={<BiLogoFacebook />}
+                          href={facebook}
+                          title={getFacebookUsername(facebook)}
+                        />
+                      )}
+                      {tiktok && (
+                        <ContactInfo
+                          tinaField={tinaField(socialMedia, "tiktok")}
+                          icon={<BiLogoTiktok />}
+                          href={tiktok}
+                          title={getTiktokUsername(tiktok)}
+                        />
+                      )}
+                    </>
                   )}
-                  {facebook && (
-                    <ContactInfo
-                      tinaField={tinaField(socialMedia, "facebook")}
-                      icon={<BiLogoFacebook />}
-                      href={facebook}
-                      title={getFacebookUsername(facebook)}
-                    />
-                  )}
-                  {tiktok && (
-                    <ContactInfo
-                      tinaField={tinaField(socialMedia, "tiktok")}
-                      icon={<BiLogoTiktok />}
-                      href={tiktok}
-                      title={getTiktokUsername(tiktok)}
-                    />
-                  )}
+
                   {telephone && (
                     <ContactInfo
-                      tinaField={tinaField(data.contactItems, "telephone")}
+                      tinaField={tinaField(contactItems, "telephone")}
                       icon={<BiPhone />}
                       href={`tel:${telephone}`}
                       title={telephone}
