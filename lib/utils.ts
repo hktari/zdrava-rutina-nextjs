@@ -7,7 +7,7 @@ export function cn(...inputs: ClassValue[]) {
 
 export function makeGroupsOf<TItem>(items: TItem[], groupSize): TItem[][] {
   let curGroupIdx = 0;
-  const groupedItems = [];
+  const groupedItems: TItem[][] = [];
 
   for (let i = 0, j = 0; i < items.length; i++, j++) {
     const item = items[i];
