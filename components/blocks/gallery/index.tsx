@@ -24,10 +24,10 @@ const GalleryBlock = ({ data }: GalleryBlockProps) => {
         <Masonry>
           {images.map((image) => (
             <PhotoAlbumItem
-              tinaField={tinaField(image!, "src")}
+              tinaField={tinaField(image, "src")}
               sizes={"(max-width: 768px) 100vw, (max-width: 900px) 50vw, 33vw"}
-              key={image?.src}
-              image={image!}
+              key={image.src}
+              image={image}
               minPhotoWidth={432}
             />
           ))}
@@ -61,15 +61,18 @@ export const galleryBlockSchema: Template = {
       ui: {
         defaultItem: { ...defaultImageItem },
       },
+      required: true,
       fields: [
         {
           label: "Slika",
           name: "src",
+          required: true,
           type: "image",
         },
         {
           label: "Alt",
           name: "alt",
+          required: true,
           type: "string",
         },
       ],

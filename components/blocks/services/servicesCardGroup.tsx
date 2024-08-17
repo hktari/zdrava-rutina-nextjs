@@ -32,7 +32,7 @@ const ServicesCardGroup = ({ items }: PageBlocksServices) => {
           >
             {itemRow.map((item, j) => (
               <div key={`service-row-${i}-${j}`} className="col mb-4">
-                <ServiceCard {...item} />
+                <ServiceCard data={item}/>
               </div>
             ))}
           </div>

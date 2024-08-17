@@ -69,6 +69,7 @@ export const servicesBlockSchema: Template = {
       label: "Seznam Storitev",
       name: "items",
       list: true,
+      required: true,
       ui: {
         itemProps: (item) => {
           return {
@@ -83,11 +84,13 @@ export const servicesBlockSchema: Template = {
         {
           type: "string",
           label: "Naslov",
+          required: true,
           name: "title",
         },
         {
           type: "string",
           label: "Povezava",
+          required: true,
           name: "link",
         },
         {
@@ -106,11 +109,13 @@ export const servicesBlockSchema: Template = {
             {
               type: "image",
               label: "Slika",
+              required: true,
               name: "src",
             },
             {
               type: "string",
               label: "Opis",
+              required: true,
               name: "alt",
             },
           ],

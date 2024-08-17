@@ -29,8 +29,8 @@ const AboutBlock = ({ data }: { data: PageBlocksAbout }) => {
               style={{ overflow: "hidden" }}
             >
               <Image
-                src={avatar?.src}
-                alt={avatar?.alt}
+                src={avatar.src}
+                alt={avatar.alt}
                 width={228}
                 height={228}
                 style={{ objectFit: "cover" }}
@@ -87,11 +87,13 @@ export const aboutBlockSchema: Template = {
       fields: [
         {
           label: "Slika",
+          required: true,
           name: "src",
           type: "image",
         },
         {
           label: "Alt",
+          required: true,
           name: "alt",
           type: "string",
         },

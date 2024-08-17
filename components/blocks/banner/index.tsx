@@ -6,7 +6,6 @@ import { PageBlocksBanner } from "../../../tina/__generated__/types";
 import Section from "../../layout/section";
 import BootstrapCarousel from "../../carousel/bootstrap";
 import ScrollIndicator from "../../scrollIndicator";
-import Image from "next/image";
 import { cn } from "../../../lib/utils";
 import BannerImage, { BannerImageProps } from "./bannerImage";
 
@@ -24,17 +23,14 @@ const BannerBlock = ({ data }: { data: PageBlocksBanner }) => {
     : "(max-width: 768px) 100vw, 80vw";
 
   const bannerImages: BannerImageProps[] =
-    data?.bannerImages
-      // TODO: Fix this type issue
-      ?.filter((img) => img && img?.src && img?.alt)
-      .map((img) => ({
-        src: img.src!,
-        alt: img.alt!,
-        sizes: bannerImageSizes,
-      })) || [];
+    data?.bannerImages.map((img) => ({
+      src: img.src,
+      alt: img.alt,
+      sizes: bannerImageSizes,
+    })) || [];
 
   return (
-    <Section noContainer={data.fullScreen} noSpacing className="px-0">
+    <Section noSpacing className="px-0">
       <div
         className={cn(
           "c-banner",
@@ -106,15 +102,18 @@ export const bannerBlockSchema: Template = {
       label: "Slike",
       name: "bannerImages",
       list: true,
+      required: true,
       fields: [
         {
           name: "src",
           label: "Image Source",
+          required: true,
           type: "image",
         },
         {
           name: "alt",
           label: "Alt Text",
+          required: true,
           type: "string",
         },
       ],
