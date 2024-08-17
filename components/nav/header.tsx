@@ -19,7 +19,7 @@ export default function Header() {
     }
   );
 
-  const title = data.title || globalSettings?.header?.name || "Zdrava Rutina";
+  const title = data.title || "Zdrava Rutina";
   const nav = globalSettings?.header?.nav || [];
   const pathname = usePathname();
   const isHomePage = pathname === "/";

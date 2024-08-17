@@ -19,7 +19,7 @@ export const Blocks = ({ blocks }: Prop) => {
       {blocks
         ? blocks.map(function (block, i) {
             return (
-              <div key={i} data-tina-field={tinaField(block)}>
+              <div key={i} data-tina-field={tinaField(block!)}>
                 <Block {...block} />
               </div>
             );
