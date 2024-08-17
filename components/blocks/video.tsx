@@ -5,7 +5,7 @@ import { Container } from "react-bootstrap";
 import { PageBlocksVideo } from "../../tina/__generated__/types";
 
 const VideoBlock = ({ data }: { data: PageBlocksVideo }) => {
-  const { title, url, autoPlay, showControls } = data;
+  const { videoTitle: title, url, autoPlay, showControls } = data;
   return (
     <Section>
       <Container>
@@ -37,7 +37,7 @@ export const videoBlockSchema: Template = {
   fields: [
     {
       type: "string",
-      name: "title",
+      name: "videoTitle",
       required: true,
       label: "Naslov",
     },
