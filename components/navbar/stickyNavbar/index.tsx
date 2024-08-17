@@ -42,6 +42,7 @@ const useShowMenu = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [showingMenuInProgress, setSetShowingMenuInProgress] = useState(false);
   const ShowMenuDurationSeconds = 0.6;
+  // eslint-disable-next-line
   const showingMenuProgressTimeoutHandle = React.useRef<NodeJS.Timeout | null>(
     null
   );
