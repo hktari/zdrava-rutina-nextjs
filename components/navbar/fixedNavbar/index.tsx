@@ -1,9 +1,6 @@
-"use client";
-
 import * as React from "react";
 import NavigationItemList from "../navigationItemList";
 import { GlobalHeader } from "../../../tina/__generated__/types";
-import { usePathname } from "next/navigation";
 
 type Props = {
   title: string;
