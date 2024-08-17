@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from "react";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import NavbarMenu from "./navbarMenu";
+import { GlobalHeader } from "../../../tina/__generated__/types";
 
 const useHideShowAnimation = ({ disableTrigger }) => {
   const { scrollY } = useScroll();
@@ -63,8 +64,18 @@ const useShowMenu = () => {
   };
 };
 
-const StickyNavbar = (props) => {
-  const { className, title: siteTitle } = props;
+type StickyNavbarProps = {
+  nav: GlobalHeader["nav"];
+  title: string;
+  className?: string;
+  isHomePage: boolean;
+};
+
+const StickyNavbar = ({
+  className,
+  title: siteTitle,
+  nav,
+}: StickyNavbarProps) => {
   const {
     showMenu,
     setShowMenu,
@@ -115,7 +126,7 @@ const StickyNavbar = (props) => {
           </button>
         </div>
 
-        <NavbarMenu navbarState={navbarState} />
+        <NavbarMenu nav={nav} navbarState={navbarState} />
       </div>
     </motion.nav>
   );

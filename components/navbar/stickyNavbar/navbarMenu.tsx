@@ -1,8 +1,14 @@
-import React from "react"
-import { motion } from "framer-motion"
-import NavigationItemList from "../navigationItemList"
+import React from "react";
+import { motion } from "framer-motion";
+import NavigationItemList from "../navigationItemList";
+import { GlobalHeader } from "../../../tina/__generated__/types";
 
-const NavbarMenu = ({ navbarState }) => {
+type NavbarMenuProps = {
+  navbarState: string;
+  nav: GlobalHeader["nav"];
+};
+
+const NavbarMenu = ({ navbarState, nav }: NavbarMenuProps) => {
   return (
     <>
       <motion.div
@@ -20,10 +26,10 @@ const NavbarMenu = ({ navbarState }) => {
           expanded: { opacity: 1, y: 0, display: "block" },
         }}
       >
-        <NavigationItemList />
+        <NavigationItemList nav={nav} />
       </motion.div>
     </>
-  )
-}
+  );
+};
 
-export default NavbarMenu
+export default NavbarMenu;

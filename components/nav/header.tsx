@@ -6,6 +6,7 @@ import FixedNavbar from "../navbar/fixedNavbar";
 import StickyNavbar from "../navbar/stickyNavbar";
 import { useTina } from "tinacms/dist/react";
 import { PageQuery, PostQuery } from "../../tina/__generated__/types";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const { globalSettings, pageData, theme } = useLayout();
@@ -18,12 +19,25 @@ export default function Header() {
     }
   );
 
-  const title = data.title || globalSettings?.header?.name || 'Zdrava Rutina';
+  const title = data.title || globalSettings?.header?.name || "Zdrava Rutina";
+  const nav = globalSettings?.header?.nav || [];
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
 
   return (
     <>
-      <FixedNavbar title={title} className="d-none d-md-block" />
-      <StickyNavbar title={title} className="d-md-none" />
+      <FixedNavbar
+        isHomePage={isHomePage}
+        title={title}
+        nav={nav}
+        className="d-none d-md-block"
+      />
+      <StickyNavbar
+        isHomePage={isHomePage}
+        title={title}
+        nav={nav}
+        className="d-md-none"
+      />
     </>
   );
 }

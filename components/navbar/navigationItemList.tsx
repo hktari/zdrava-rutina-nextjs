@@ -1,5 +1,3 @@
-"use client";
-
 import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -16,15 +14,16 @@ const pathNameMatchesHref = (href, pathname) => {
   return pathname.replace("/", "") === href;
 };
 
-const NavigationItemList = () => {
-  const { globalSettings } = useLayout();
-  const navItems = globalSettings.header.nav;
+type NavigationItemListProps = {
+  nav: GlobalHeader["nav"];
+};
 
+const NavigationItemList = ({ nav }: NavigationItemListProps) => {
   const pathname = usePathname();
 
   return (
     <ul className="navbar-nav">
-      {navItems.map(({ href, label }, index) => (
+      {nav.map(({ href, label }, index) => (
         <li key={`${href}-${label}-${index}`} className="nav-item order-md-1">
           <ExactNavLink
             isActive={pathNameMatchesHref(href, pathname)}

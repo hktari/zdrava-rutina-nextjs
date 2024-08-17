@@ -15,6 +15,7 @@ const Global: Collection = {
       type: "object",
       label: "Header",
       name: "header",
+      required: true,
       fields: [
         iconSchema as any,
         {
@@ -35,6 +36,7 @@ const Global: Collection = {
           type: "object",
           label: "Nav Links",
           name: "nav",
+          required: true,
           list: true,
           ui: {
             itemProps: (item) => {
@@ -50,11 +52,13 @@ const Global: Collection = {
               type: "string",
               label: "Link",
               name: "href",
+              required: true,
             },
             {
               type: "string",
               label: "Label",
               name: "label",
+              required: true,
             },
           ],
         },
