@@ -42,13 +42,16 @@ const useShowMenu = () => {
   const [showMenu, setShowMenu] = useState(false);
   const [showingMenuInProgress, setSetShowingMenuInProgress] = useState(false);
   const ShowMenuDurationSeconds = 0.6;
-  const showingMenuProgressTimeoutHandle = React.useRef(null);
+  const showingMenuProgressTimeoutHandle = React.useRef<NodeJS.Timeout | null>(
+    null
+  );
 
   useEffect(() => {
     setSetShowingMenuInProgress(true);
 
     if (showingMenuProgressTimeoutHandle.current) {
       clearTimeout(showingMenuProgressTimeoutHandle.current);
+      showingMenuProgressTimeoutHandle.current = null;
     }
 
     showingMenuProgressTimeoutHandle.current = setTimeout(() => {
