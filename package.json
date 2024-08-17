@@ -8,6 +8,7 @@
     "start": "tinacms build && next start",
     "export": "npm run build && next export",
     "lint": "next lint",
+    "type-check": "tsc --noEmit",
     "dev:build": "next build"
   },
   "devDependencies": {
