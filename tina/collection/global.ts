@@ -2,7 +2,7 @@ import type { Collection } from "tinacms";
 import { ColorPickerInput } from "../fields/color";
 
 const Global: Collection = {
-  label: "Global",
+  label: "Splošno",
   name: "global",
   path: "content/global",
   format: "json",

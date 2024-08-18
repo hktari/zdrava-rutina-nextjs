@@ -9,7 +9,7 @@ import { videoBlockSchema } from "../../components/blocks/video";
 import { galleryBlockSchema } from "../../components/blocks/gallery";
 
 const Page: Collection = {
-  label: "Pages",
+  label: "Strani",
   name: "page",
   path: "content/pages",
   ui: {
