@@ -27,7 +27,7 @@ const Global: Collection = {
               return { label: item?.label };
             },
             defaultItem: {
-              href: "home",
+              href: "/",
               label: "Home",
             },
           },

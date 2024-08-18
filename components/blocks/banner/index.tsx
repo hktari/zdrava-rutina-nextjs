@@ -34,7 +34,7 @@ const BannerBlock = ({ data }: { data: PageBlocksBanner }) => {
       <div
         className={cn(
           "c-banner",
-          fullScreen ? "c-banner--full-screen" : "container-md"
+          fullScreen ? "c-banner--full-screen" : "container-md px-0"
         )}
       >
         {bannerImages && (
