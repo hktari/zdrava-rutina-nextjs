@@ -23,13 +23,33 @@ const Page: Collection = {
   },
   fields: [
     {
-      type: "string",
-      label: "Title",
-      name: "title",
-      description:
-        "The title of the page. This is used to display the title in the CMS",
-      isTitle: true,
+      type: "object",
+      label: "SEO",
+      name: "seo",
       required: true,
+      fields: [
+        {
+          type: "string",
+          label: "Naslov",
+          name: "title",
+          required: true,
+        },
+        {
+          type: "image",
+          label: "Slika za deljenje",
+          name: "image",
+        },
+        {
+          type: "string",
+          label: "Opis",
+          name: "description",
+        },
+        {
+          type: "string",
+          label: "Ključne Besede",
+          name: "keywords",
+        },
+      ],
     },
     {
       type: "object",
@@ -47,7 +67,7 @@ const Page: Collection = {
         contactBlockSchema,
         aboutBlockSchema,
         videoBlockSchema,
-        galleryBlockSchema
+        galleryBlockSchema,
       ],
     },
   ],

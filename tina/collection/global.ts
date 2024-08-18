@@ -12,6 +12,44 @@ const Global: Collection = {
   fields: [
     {
       type: "object",
+      label: "SEO",
+      name: "seo",
+      required: true,
+      fields: [
+        {
+          type: "string",
+          label: "Naslov Strani",
+          name: "siteName",
+          required: true,
+        },
+        {
+          type: "image",
+          label: "Logo",
+          name: "logo",
+          required: true,
+        },
+        {
+          type: "image",
+          label: "Slika za deljenje",
+          name: "image",
+          required: true,
+        },
+        {
+          type: "string",
+          label: "Opis",
+          name: "description",
+          required: true,
+        },
+        {
+          type: "string",
+          label: "Ključne Besede",
+          name: "keywords",
+          required: true,
+        },
+      ],
+    },
+    {
+      type: "object",
       label: "Header",
       name: "header",
       required: true,
