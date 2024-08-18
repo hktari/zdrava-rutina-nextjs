@@ -35,7 +35,9 @@ type GenerateMetadataProps = {
   searchParams: { [key: string]: string | string[] | undefined };
 };
 
-
+const formatTitle = (businessName: string, pageTitle: string) => {
+  return pageTitle ? `${pageTitle} | ${businessName}` : businessName;
+};
 
 export async function generateMetadata(
   { params, searchParams }: GenerateMetadataProps,
@@ -49,20 +51,21 @@ export async function generateMetadata(
     relativePath: `${params.filename}.md`,
   });
 
-  // TODO: refactor to function
-  const businessName = globalData.global.seo.siteName;
-  const pageTitle = data?.page?.seo?.title;
-  const titleFormatted = pageTitle
-    ? `${pageTitle} | ${businessName}`
-    : businessName;
+  const title = formatTitle(
+    globalData.global.seo.siteName,
+    data?.page?.seo?.title
+  );
 
   return {
-    title: titleFormatted,
+    title,
     description:
       data?.page?.seo?.description ?? globalData.global.seo.description,
     keywords: data?.page?.seo?.keywords ?? globalData.global.seo.keywords,
     openGraph: {
       images: [data?.page?.seo?.image ?? globalData.global.seo.image],
+    },
+    icons: {
+      icon: globalData.global.seo.logo,
     },
   };
 }
