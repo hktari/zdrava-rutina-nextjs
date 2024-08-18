@@ -27,3 +27,5 @@ yarn-error.log*
 
 .tina/__generated__
 node_modules
+# Local Netlify folder
+.netlify
