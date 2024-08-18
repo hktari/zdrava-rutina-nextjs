@@ -34,7 +34,7 @@ const BannerBlock = ({ data }: { data: PageBlocksBanner }) => {
       <div
         className={cn(
           "c-banner",
-          data.fullScreen ? "c-banner--full-screen" : ""
+          fullScreen ? "c-banner--full-screen" : "container-md"
         )}
       >
         {bannerImages && (
@@ -50,7 +50,7 @@ const BannerBlock = ({ data }: { data: PageBlocksBanner }) => {
               images={bannerImages}
               ImageComponent={BannerImage}
             />
-            {data.fullScreen && (
+            {fullScreen && (
               <div className="d-none d-md-block">
                 <ScrollIndicator />
               </div>
