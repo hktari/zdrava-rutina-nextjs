@@ -34,10 +34,10 @@ blocks:
       molestiae.
     _template: content
   - videoTitle: Sloni
-    autoPlay: false
     showControls: true
     url: >-
       https://res.cloudinary.com/div038xr5/video/upload/v1716533955/samples/elephants.mp4
+    autoPlay: false
     _template: video
   - body: >
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Non reiciendis
@@ -53,15 +53,13 @@ blocks:
       molestiae.
     _template: content
   - images:
-      - src: /uploads/hatha-joga.jpg
+      - src: >-
+          https://res.cloudinary.com/div038xr5/image/upload/v1719944834/zdrava-rutina/hatha-joga/hatha_20yoga_201178187_1280_zzazxq.jpg
         alt: hatha joga
-      - src: /uploads/hatha-joga.jpg
+      - src: >-
+          https://res.cloudinary.com/div038xr5/image/upload/v1719944829/zdrava-rutina/hatha-joga/Hatha_20Yoga_20Foundations.jpg_nxxnka.jpg
         alt: hatha joga
-      - src: /uploads/hatha-joga.jpg
-        alt: hatha joga
-      - src: /uploads/hatha-joga.jpg
-        alt: hatha joga
-      - src: /uploads/hatha-joga.jpg
+      - src: ''
         alt: hatha joga
     _template: imageGallery
 ---
