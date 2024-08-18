@@ -59,7 +59,8 @@ blocks:
       - src: >-
           https://res.cloudinary.com/div038xr5/image/upload/v1719944829/zdrava-rutina/hatha-joga/Hatha_20Yoga_20Foundations.jpg_nxxnka.jpg
         alt: hatha joga
-      - src: ''
+      - src: >-
+          https://res.cloudinary.com/div038xr5/image/upload/v1719944826/zdrava-rutina/hatha-joga/78635074_t7h4yw.jpg
         alt: hatha joga
     _template: imageGallery
 ---
