@@ -1,5 +1,6 @@
 ---
-title: masaze
+seo:
+  title: masaze
 blocks:
   - bannerImages:
       - src: >-

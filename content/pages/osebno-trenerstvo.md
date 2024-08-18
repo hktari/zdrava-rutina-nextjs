@@ -1,5 +1,6 @@
 ---
-title: osebno trenerstvo
+seo:
+  title: osebno trenerstvo
 blocks:
   - carouselIntervalSeconds: 2.5
     bannerImages:

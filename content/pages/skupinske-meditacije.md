@@ -1,4 +1,5 @@
 ---
-title: skupinske-meditacije
+seo:
+    title: skupinske-meditacije
 ---
 

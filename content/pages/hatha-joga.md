@@ -1,5 +1,7 @@
 ---
-title: hatha joga
+seo:
+  title: Hatha Joga
+
 blocks:
   - bannerImages:
       - src: /uploads/hatha-joga.jpg

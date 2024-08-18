@@ -1,5 +1,6 @@
 ---
-title: Zdrava Rutina
+seo:
+  title: Zdrava Rutina
 blocks:
   - fullScreen: true
     bannerImages:

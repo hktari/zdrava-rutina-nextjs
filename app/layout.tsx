@@ -27,14 +27,6 @@ const amaticSC = Amatic_SC({
 
 const fonts = [raleway, openSans, amaticSC];
 
-export const metadata: Metadata = {
-  title: "Zdrava Rutina",
-  description:
-    "Zdrava Rutina je spletna stran, ki ponuja nasvete za zdrav življenjski slog. Na njej boste našli informacije o praksah, vadbi in drugih temah, ki so povezane z zdravjem ter dobrim počutjem.",
-  keywords:
-    "zdrava rutina, joga, meditacija, osebni trener, masaže, zdravje, vadba, zdrav življenjski slog",
-};
-
 export default async function RootLayout({
   children,
 }: {
