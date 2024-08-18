@@ -9,12 +9,12 @@
     "color": "default",
     "nav": [
       {
-        "href": "/",
-        "label": "Domov"
-      },
-      {
         "href": "/#services",
         "label": "Storitve"
+      },
+      {
+        "href": "/",
+        "label": "Domov"
       },
       {
         "href": "/#contact",

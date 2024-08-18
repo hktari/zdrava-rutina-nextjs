@@ -4,6 +4,7 @@ import React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { GlobalHeader } from "../../tina/__generated__/types";
+import { tinaField } from "tinacms/dist/react";
 
 const ExactNavLink = ({ href, isActive, children }) => (
   <Link href={href} className={`nav-link ${isActive ? "active" : ""}`}>
@@ -24,16 +25,26 @@ const NavigationItemList = ({ nav }: NavigationItemListProps) => {
 
   return (
     <ul className="navbar-nav">
-      {nav.map(({ href, label }, index) => (
-        <li key={`${href}-${label}-${index}`} className="nav-item order-md-1">
-          <ExactNavLink
-            isActive={pathNameMatchesHref(href, pathname)}
-            href={href}
+      {nav.map((navItem, index) => {
+        const { href, label } = navItem;
+
+        const isHomePage = href === "/";
+
+        return (
+          <li
+            data-tina-field={tinaField(navItem, "label")}
+            key={`${href}-${label}-${index}`}
+            className={`c-nav-item-list__item nav-item ${isHomePage ? "c-nav-item-list__item--home" : ""}`}
           >
-            {label}
-          </ExactNavLink>
-        </li>
-      ))}
+            <ExactNavLink
+              isActive={pathNameMatchesHref(href, pathname)}
+              href={href}
+            >
+              {label}
+            </ExactNavLink>
+          </li>
+        );
+      })}
     </ul>
   );
 };
