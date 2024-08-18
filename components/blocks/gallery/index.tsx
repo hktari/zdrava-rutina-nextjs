@@ -20,19 +20,23 @@ const GalleryBlock = ({ data }: GalleryBlockProps) => {
 
   return (
     <Section className="px-md-3">
-      <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 768: 2, 900: 3 }}>
-        <Masonry>
-          {images.map((image) => (
-            <PhotoAlbumItem
-              tinaField={tinaField(image, "src")}
-              sizes={"(max-width: 768px) 100vw, (max-width: 900px) 50vw, 33vw"}
-              key={image.src}
-              image={image}
-              minPhotoWidth={432}
-            />
-          ))}
-        </Masonry>
-      </ResponsiveMasonry>
+      <div className="container-md">
+        <ResponsiveMasonry columnsCountBreakPoints={{ 350: 1, 768: 2, 900: 3 }}>
+          <Masonry>
+            {images.map((image) => (
+              <PhotoAlbumItem
+                tinaField={tinaField(image, "src")}
+                sizes={
+                  "(max-width: 768px) 100vw, (max-width: 900px) 50vw, 33vw"
+                }
+                key={image.src}
+                image={image}
+                minPhotoWidth={432}
+              />
+            ))}
+          </Masonry>
+        </ResponsiveMasonry>
+      </div>
     </Section>
   );
 };
