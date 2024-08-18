@@ -28,7 +28,7 @@ export const videoBlockSchema: Template = {
   name: "video",
   ui: {
     defaultItem: {
-      title: "Video",
+      videoTitle: "Video",
       url: "https://youtu.be/FwOoC0QdeG4?si=IJx6sSwMQ1RbZKcI",
       autoPlay: false,
       showControls: true,

@@ -33,7 +33,8 @@ blocks:
       repellendus. Voluptates, quas dicta! Voluptatem alias debitis dignissimos
       molestiae.
     _template: content
-  - title: Sloni
+  - videoTitle: Sloni
+    autoPlay: false
     showControls: true
     url: >-
       https://res.cloudinary.com/div038xr5/video/upload/v1716533955/samples/elephants.mp4
