@@ -19,7 +19,13 @@ export default function Header() {
     }
   );
 
-  const title = data.title || "Zdrava Rutina";
+  let title = globalSettings?.seo?.siteName || "";
+  if (data.__typename === "Page") {
+    title = data.seo.title;
+  } else if (data.__typename === "Post") {
+    title = data.title;
+  }
+
   const nav = globalSettings?.header?.nav || [];
   const pathname = usePathname();
   const isHomePage = pathname === "/";
