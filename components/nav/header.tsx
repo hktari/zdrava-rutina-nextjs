@@ -6,7 +6,6 @@ import FixedNavbar from "../navbar/fixedNavbar";
 import StickyNavbar from "../navbar/stickyNavbar";
 import { useTina } from "tinacms/dist/react";
 import { PageQuery, PostQuery } from "../../tina/__generated__/types";
-import { usePathname } from "next/navigation";
 
 export default function Header() {
   const { globalSettings, pageData, theme } = useLayout();
@@ -27,8 +26,8 @@ export default function Header() {
   }
 
   const nav = globalSettings?.header?.nav || [];
-  const pathname = usePathname();
-  const isHomePage = pathname === "/";
+
+  const isHomePage = data._sys.breadcrumbs.toString() === "home";
 
   return (
     <>
