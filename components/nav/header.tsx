@@ -1,34 +1,17 @@
-"use client";
-
 import React from "react";
-import { useLayout } from "../layout/layout-context";
 import FixedNavbar from "../navbar/fixedNavbar";
 import StickyNavbar from "../navbar/stickyNavbar";
-import { useTina } from "tinacms/dist/react";
-import { PageQuery, PostQuery } from "../../tina/__generated__/types";
+import {
+  GlobalHeader,
+} from "../../tina/__generated__/types";
 
-export default function Header() {
-  const { globalSettings, pageData, theme } = useLayout();
+type HeaderProps = {
+  isHomePage: boolean;
+  title: string;
+  nav: GlobalHeader["nav"];
+};
 
-  const { data } = useTina(
-    pageData as {
-      query: string;
-      variables: object;
-      data: PageQuery["page"] | PostQuery["post"];
-    }
-  );
-
-  let title = globalSettings?.seo?.siteName || "";
-  if (data.__typename === "Page") {
-    title = data.seo.title;
-  } else if (data.__typename === "Post") {
-    title = data.title;
-  }
-
-  const nav = globalSettings?.header?.nav || [];
-
-  const isHomePage = data._sys.breadcrumbs.toString() === "home";
-
+export default function Header({ isHomePage, title, nav }: HeaderProps) {
   return (
     <>
       <FixedNavbar
