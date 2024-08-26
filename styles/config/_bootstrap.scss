@@ -6,10 +6,10 @@
 
 // 2. Include any default variable overrides here
 $primary: beige;
-$secondary: olive;
-$green: olive;
+$secondary: #4F5200;
+$green: #4F5200;
 
-$link-color: olive;
+$link-color: #4F5200;
 $body-bg: beige;
 $body-color: #000;
 
@@ -17,7 +17,7 @@ $card-bg: beige;
 $card-color: #000;
 $card-title-font-weight: 600;
 
-$navbar-bg: olive;
+$navbar-bg: #4F5200;
 $navbar-color: beige;
 
 @import "./fonts"; 
