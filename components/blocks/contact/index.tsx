@@ -37,6 +37,7 @@ const ContactInfo = ({ icon, href, title, tinaField }: ContactInfoProps) => {
       <a
         className="c-contact-info__icon d-inline d-md-none display-1"
         href={href}
+        aria-label={title}
       >
         {icon}
       </a>
