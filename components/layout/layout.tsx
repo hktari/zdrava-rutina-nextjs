@@ -26,7 +26,9 @@ export default async function Layout({ children, rawPageData }: LayoutProps) {
 
   if (pageData) {
     title = pageData.seo.title;
-    isHomePage = pageData._sys?.breadcrumbs?.toString() === "home";
+    isHomePage =
+      pageData.blocks?.find((b) => b?.__typename === "PageBlocksBanner")
+        ?.fullScreen ?? false;
   } else if (postData) {
     title = postData.title;
   }
