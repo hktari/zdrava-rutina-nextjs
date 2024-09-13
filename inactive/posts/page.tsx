@@ -10,7 +10,7 @@ export default async function PostsPage() {
   }
 
   return (
-    <Layout rawPageData={posts.data}>
+    <Layout title="Posts" isHomePage={false} rawPageData={posts.data}>
       <PostsClientPage {...posts} />
     </Layout>
   );

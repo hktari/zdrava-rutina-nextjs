@@ -4,19 +4,31 @@ import ClientPage from "./client-page";
 import Layout from "../../components/layout/layout";
 import { ResolvingMetadata, Metadata } from "next";
 import { Props } from "tinacms";
+import { PageQuery } from "../../tina/__generated__/types";
+
+function isHomePage(pageData: PageQuery["page"]) {
+  const bannerBlock = pageData.blocks?.find(
+    (b) => b?.__typename === "PageBlocksBanner"
+  );
+  return bannerBlock?.fullScreen || false;
+}
 
 export default async function Page({
   params,
 }: {
   params: { filename: string[] };
 }) {
-  const data = await client.queries.page({
+  const pageQuery = await client.queries.page({
     relativePath: `${params.filename}.md`,
   });
 
   return (
-    <Layout rawPageData={data}>
-      <ClientPage {...data}></ClientPage>
+    <Layout
+      isHomePage={isHomePage(pageQuery.data.page)}
+      title={pageQuery.data.page.seo.title}
+      rawPageData={pageQuery}
+    >
+      <ClientPage {...pageQuery}></ClientPage>
     </Layout>
   );
 }
