@@ -4,8 +4,9 @@ seo:
 blocks:
   - fullScreen: true
     bannerImages:
-      - src: /uploads/hatha-joga.jpg
-        alt: woman doing hatha joga
+      - src: >-
+          https://res.cloudinary.com/div038xr5/image/upload/v1723996150/zdrava-rutina/zdrava-rutina-og_uiq6es.jpg
+        alt: anze na masazi
       - src: /uploads/sea-bend-backward.jpeg
         alt: womand sea bend backwards
     _template: banner
