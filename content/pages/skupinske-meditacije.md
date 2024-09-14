@@ -1,6 +1,6 @@
 ---
 seo:
-  title: skupinske-meditacije
+  title: Skupinske Meditacije
 blocks:
   - body: >
       Vodene skupinske meditacije so priložnost, da se skupaj z drugimi poglobiš
