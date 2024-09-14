@@ -5,7 +5,7 @@ blocks:
   - fullScreen: true
     bannerImages:
       - src: >-
-          https://res.cloudinary.com/div038xr5/image/upload/v1723996150/zdrava-rutina/zdrava-rutina-og_uiq6es.jpg
+          https://res.cloudinary.com/div038xr5/image/upload/v1716534515/zdrava-rutina/meditation-hands_el4oog.jpg
         alt: anze na masazi
       - src: /uploads/sea-bend-backward.jpeg
         alt: womand sea bend backwards
