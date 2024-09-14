@@ -86,7 +86,7 @@ blocks:
           src: /uploads/hatha-joga.jpg
           alt: Hatha Joga
       - title: Masaže
-        link: /massages
+        link: /masaze
         description: 'Sproščanje mišic, lajšanje bolečin in izboljšanje počutja'
         image:
           src: /uploads/massage.jpg
