@@ -1,6 +1,6 @@
 ---
 seo:
-  title: masaze
+  title: Masaže
 blocks:
   - bannerImages:
       - src: >-
