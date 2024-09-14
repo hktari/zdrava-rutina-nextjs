@@ -33,17 +33,24 @@ blocks:
     autoPlay: false
     _template: video
   - body: >
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Non reiciendis
-      aut rerum aliquam molestias necessitatibus atque repudiandae. Pariatur
-      perspiciatis molestiae nobis obcaecati quisquam nam dolore rerum
-      repellendus. Voluptates, quas dicta! Voluptatem alias debitis dignissimos
-      molestiae.
+      ### Prilagojeni programi joge
 
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Non reiciendis
-      aut rerum aliquam molestias necessitatibus atque repudiandae. Pariatur
-      perspiciatis molestiae nobis obcaecati quisquam nam dolore rerum
-      repellendus. Voluptates, quas dicta! Voluptatem alias debitis dignissimos
-      molestiae.
+
+      Na tečajih prilagajam vadbo glede na potrebe posameznika, pri čemer
+      upoštevam telesne omejitve, morebitne poškodbe in cilje. Vsakdo je
+      dobrodošel, ne glede na starost ali fizično pripravljenost. Moj cilj je
+      ustvariti podporno in sproščeno okolje, kjer lahko vsakdo najde svoje
+      mesto in napreduje v svojem tempu.
+
+
+      ### Joga kot pot do ravnovesja
+
+
+      Joga je odlična priložnost, da si vzameš čas zase, se povežeš s svojim
+      notranjim jazom in vzpostaviš ravnovesje med telesom in umom. Skupaj bomo
+      gradili na tvoji fizični in duševni moči, ter ustvarili prakso, ki te bo
+      podpirala na vseh ravneh – tako v vsakdanjem življenju kot na tvoji poti k
+      notranjemu miru in dobremu počutju.
     _template: content
   - images:
       - src: >-
