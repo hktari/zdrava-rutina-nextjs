@@ -71,25 +71,25 @@ blocks:
     items:
       - title: Skupinske Meditacije
         link: /skupinske-meditacije
-        description: Opis storitve skupinskih meditacij
+        description: Sprostitvene tehnike za notranji mir in zmanjšanje stresa
         image:
           src: /uploads/meditation-group.jpg
           alt: Meditation
       - title: Osebno Trenerstvo
         link: /osebno-trenerstvo
-        description: Opis storitve osebno trenerstvo
+        description: Prilagojeni vadbeni programi za dosego individualnih ciljev
         image:
           src: /uploads/personal-trainer.jpg
           alt: personal trainer female
       - title: Hatha Joga
         link: /hatha-joga
-        description: Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.
+        description: Uravnotežena vadba za krepitev telesa in umiritev uma
         image:
           src: /uploads/hatha-joga.jpg
           alt: Hatha Joga
       - title: Masaže
         link: /massages
-        description: Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.
+        description: 'Sproščanje mišic, lajšanje bolečin in izboljšanje počutja'
         image:
           src: /uploads/massage.jpg
           alt: Massage
