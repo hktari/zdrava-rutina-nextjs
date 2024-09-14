@@ -6,7 +6,7 @@ blocks:
     bannerImages:
       - src: >-
           https://res.cloudinary.com/div038xr5/image/upload/v1716534515/zdrava-rutina/meditation-hands_el4oog.jpg
-        alt: anze na masazi
+        alt: 'oseba meditira, roka'
       - src: /uploads/sea-bend-backward.jpeg
         alt: womand sea bend backwards
     _template: banner
