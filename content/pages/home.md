@@ -61,7 +61,8 @@ blocks:
       officiis ipsa deleniti, tempore itaque dolorem ad sit aut provident
       officia.
     avatar:
-      src: /uploads/avatar.jpg
+      src: >-
+        https://res.cloudinary.com/div038xr5/image/upload/v1726301633/zdrava-rutina/zdrava-rutina-portrait_arvjsg.jpg
       alt: avatar
     _template: about
   - title: Storitve
