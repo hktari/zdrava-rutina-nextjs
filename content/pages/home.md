@@ -94,7 +94,7 @@ blocks:
           src: /uploads/massage.jpg
           alt: Massage
     _template: services
-  - title: Kontaktirajte nas
+  - title: Kontaktirajte me
     contactItems:
       email: hi@zdrava-rutina.com
       telephone: '+38641222333'
