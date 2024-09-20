@@ -1,0 +1,32 @@
+
+.c-navbar.navbar {
+  h1 {
+    font-weight: 300;
+  }
+
+  .nav-link {
+    font-family: $headings-font-family;
+    font-weight: 300;
+  }
+
+  .nav-link.active {
+    color: orange;
+  }
+
+}
+
+.c-navbar::before {
+  content: "";
+  display: block;
+  background-color: rgba($color: #fff, $alpha: 0.9);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+.c-navbar__container {
+  position: relative;
+  z-index: 2;
+}

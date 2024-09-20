@@ -1,33 +1,55 @@
 import type { Collection } from "tinacms";
-import { heroBlockSchema } from "../../components/blocks/hero";
 import { contentBlockSchema } from "../../components/blocks/content";
-import { testimonialBlockSchema } from "../../components/blocks/testimonial";
-import { featureBlockSchema } from "../../components/blocks/features";
+import { bannerBlockSchema } from "../../components/blocks/banner";
+import { servicesBlockSchema } from "../../components/blocks/services";
+import { wordCollageBlockSchema } from "../../components/blocks/wordsCollage";
+import { contactBlockSchema } from "../../components/blocks/contact";
+import { aboutBlockSchema } from "../../components/blocks/about";
+import { videoBlockSchema } from "../../components/blocks/video";
+import { galleryBlockSchema } from "../../components/blocks/gallery";
 
 const Page: Collection = {
-  label: "Pages",
+  label: "Strani",
   name: "page",
   path: "content/pages",
   ui: {
     router: ({ document }) => {
       if (document._sys.filename === "home") {
         return `/`;
+      } else {
+        return document._sys.filename;
       }
-      if (document._sys.filename === "about") {
-        return `/about`;
-      }
-      return undefined;
     },
   },
   fields: [
     {
-      type: "string",
-      label: "Title",
-      name: "title",
-      description:
-        "The title of the page. This is used to display the title in the CMS",
-      isTitle: true,
+      type: "object",
+      label: "SEO",
+      name: "seo",
       required: true,
+      fields: [
+        {
+          type: "string",
+          label: "Naslov",
+          name: "title",
+          required: true,
+        },
+        {
+          type: "image",
+          label: "Slika za deljenje",
+          name: "image",
+        },
+        {
+          type: "string",
+          label: "Opis",
+          name: "description",
+        },
+        {
+          type: "string",
+          label: "Ključne Besede",
+          name: "keywords",
+        },
+      ],
     },
     {
       type: "object",
@@ -38,11 +60,14 @@ const Page: Collection = {
         visualSelector: true,
       },
       templates: [
-        heroBlockSchema,
-        //@ts-ignore
-        featureBlockSchema,
         contentBlockSchema,
-        testimonialBlockSchema,
+        bannerBlockSchema,
+        servicesBlockSchema,
+        wordCollageBlockSchema,
+        contactBlockSchema,
+        aboutBlockSchema,
+        videoBlockSchema,
+        galleryBlockSchema,
       ],
     },
   ],

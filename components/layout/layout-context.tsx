@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useContext } from "react";
 import { GlobalQuery } from "../../tina/__generated__/types";
+import { useTina } from "tinacms/dist/react";
 
 interface LayoutState {
   globalSettings: GlobalQuery["global"];
@@ -42,6 +43,8 @@ export const LayoutProvider: React.FC<LayoutProviderProps> = ({
   const [globalSettings, setGlobalSettings] = useState<GlobalQuery["global"]>(
     initialGlobalSettings
   );
+
+  
   const [pageData, setPageData] = useState<{}>(initialPageData);
 
   const theme = globalSettings.theme;

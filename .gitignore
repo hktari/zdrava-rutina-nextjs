@@ -1,3 +1,5 @@
+# TypeScript build info
+tsconfig.tsbuildinfo
 
 # dependencies
 /node_modules
@@ -26,3 +28,6 @@ yarn-debug.log*
 yarn-error.log*
 
 .tina/__generated__
+node_modules
+# Local Netlify folder
+.netlify

@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import { format } from "date-fns";
 import React from "react";
 import {
@@ -23,6 +25,7 @@ export const components: Components<{
     disclaimer?: TinaMarkdownContent;
   };
 }> = {
+  // @ts-ignore
   code_block: (props) => <Prism {...props} />,
   BlockQuote: (props: {
     children: TinaMarkdownContent;

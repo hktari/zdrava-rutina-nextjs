@@ -3,27 +3,30 @@ import { LayoutProvider } from "./layout-context";
 import client from "../../tina/__generated__/client";
 import Header from "../nav/header";
 import Footer from "../nav/footer";
-import { cn } from "../../lib/utils";
 
 type LayoutProps = PropsWithChildren & {
+  title?: string;
+  isHomePage?: boolean;
   rawPageData?: any;
 };
 
-export default async function Layout({ children, rawPageData }: LayoutProps) {
+export default async function Layout({
+  children,
+  title,
+  isHomePage = false,
+  rawPageData,
+}: LayoutProps) {
   const { data: globalData } = await client.queries.global({
     relativePath: "index.json",
   });
 
+  title = title || globalData?.global.seo?.siteName || "";
+  const nav = globalData?.global?.header?.nav || [];
+
   return (
     <LayoutProvider globalSettings={globalData.global} pageData={rawPageData}>
-      <Header />
-      <main
-        className={cn(
-          "font-sans flex-1 text-gray-800 bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-1000 flex flex-col"
-        )}
-      >
-        {children}
-      </main>
+      <Header nav={nav} title={title} isHomePage={isHomePage} />
+      <main className={""}>{children}</main>
       <Footer />
     </LayoutProvider>
   );

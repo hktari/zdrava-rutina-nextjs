@@ -1,0 +1,15 @@
+
+.c-sticky-navbar.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: $navbar-z-index;
+}
+
+.c-sticky-navbar__menu {
+  position: relative;
+  &.hidden {
+    top: -4rem;
+  }
+}

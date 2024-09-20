@@ -1,34 +1,29 @@
 {
+  "seo": {
+    "siteName": "Zdrava Rutina",
+    "logo": "https://res.cloudinary.com/div038xr5/image/upload/v1723996001/zdrava-rutina/resized_logo_suv2ww.png",
+    "image": "https://res.cloudinary.com/div038xr5/image/upload/v1723996150/zdrava-rutina/zdrava-rutina-og_uiq6es.jpg",
+    "description": "Zdrava Rutina je spletna stran, ki ponuja storitve s področja zdravega življenja.",
+    "keywords": "zdrava rutina, zdravje, zdrava prehrana, zdrav življenjski slog, zdravje in dobro počutje"
+  },
   "header": {
-    "icon": {
-      "name": "Tina",
-      "color": "orange",
-      "style": "float"
-    },
-    "name": "Tina Starter",
-    "color": "default",
     "nav": [
       {
-        "href": "",
-        "label": "Home"
+        "href": "/#services",
+        "label": "Storitve"
       },
       {
-        "href": "about",
-        "label": "About"
+        "href": "/",
+        "label": "Domov"
       },
       {
-        "href": "posts",
-        "label": "Blog"
+        "href": "/#contact",
+        "label": "Kontakt"
       }
     ]
   },
   "footer": {
-    "color": "default",
-    "social": {
-      "facebook": "/",
-      "twitter": "/",
-      "instagram": "/"
-    }
+    "color": "default"
   },
   "theme": {
     "color": "blue",

@@ -1,0 +1,29 @@
+.c-banner__container {
+}
+
+.c-banner__container .c-banner__image {
+  height: 250px;
+  position: relative;
+}
+
+@include media-breakpoint-up(md) {
+  .c-banner {
+    .c-banner__image {
+      height: 406px;
+    }
+
+    &.c-banner--full-screen {
+      .c-banner__image {
+        height: 100vh;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .c-banner {
+    .c-banner__image {
+      height: 745px;
+    }
+  }
+}

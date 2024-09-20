@@ -1,7 +1,7 @@
 import type { Collection } from "tinacms";
 
 const Author: Collection = {
-  label: "Authors",
+  label: "Avtorji",
   name: "author",
   path: "content/authors",
   format: "md",

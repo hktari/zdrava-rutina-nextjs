@@ -1,9 +1,8 @@
 import type { Collection } from "tinacms";
 import { ColorPickerInput } from "../fields/color";
-import { iconSchema } from "../fields/icon";
 
 const Global: Collection = {
-  label: "Global",
+  label: "Splošno",
   name: "global",
   path: "content/global",
   format: "json",
@@ -13,35 +12,60 @@ const Global: Collection = {
   fields: [
     {
       type: "object",
+      label: "SEO",
+      name: "seo",
+      required: true,
+      fields: [
+        {
+          type: "string",
+          label: "Naslov Strani",
+          name: "siteName",
+          required: true,
+        },
+        {
+          type: "image",
+          label: "Logo",
+          name: "logo",
+          required: true,
+        },
+        {
+          type: "image",
+          label: "Slika za deljenje",
+          name: "image",
+          required: true,
+        },
+        {
+          type: "string",
+          label: "Opis",
+          name: "description",
+          required: true,
+        },
+        {
+          type: "string",
+          label: "Ključne Besede",
+          name: "keywords",
+          required: true,
+        },
+      ],
+    },
+    {
+      type: "object",
       label: "Header",
       name: "header",
+      required: true,
       fields: [
-        iconSchema as any,
-        {
-          type: "string",
-          label: "Name",
-          name: "name",
-        },
-        {
-          type: "string",
-          label: "Color",
-          name: "color",
-          options: [
-            { label: "Default", value: "default" },
-            { label: "Primary", value: "primary" },
-          ],
-        },
         {
           type: "object",
           label: "Nav Links",
           name: "nav",
+          required: true,
           list: true,
           ui: {
             itemProps: (item) => {
               return { label: item?.label };
             },
             defaultItem: {
-              href: "home",
+              href: "/",
               label: "Home",
             },
           },
@@ -50,11 +74,13 @@ const Global: Collection = {
               type: "string",
               label: "Link",
               name: "href",
+              required: true,
             },
             {
               type: "string",
               label: "Label",
               name: "label",
+              required: true,
             },
           ],
         },
@@ -74,46 +100,19 @@ const Global: Collection = {
             { label: "Primary", value: "primary" },
           ],
         },
-        {
-          type: "object",
-          label: "Social Links",
-          name: "social",
-          fields: [
-            {
-              type: "string",
-              label: "Facebook",
-              name: "facebook",
-            },
-            {
-              type: "string",
-              label: "Twitter",
-              name: "twitter",
-            },
-            {
-              type: "string",
-              label: "Instagram",
-              name: "instagram",
-            },
-            {
-              type: "string",
-              label: "Github",
-              name: "github",
-            },
-          ],
-        },
       ],
     },
     {
       type: "object",
       label: "Theme",
       name: "theme",
-      // @ts-ignore
       fields: [
         {
           type: "string",
           label: "Primary Color",
           name: "color",
           ui: {
+            // @ts-ignore
             component: ColorPickerInput,
           },
         },

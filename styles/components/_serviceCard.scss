@@ -1,0 +1,20 @@
+.c-service-card {
+  cursor: pointer;
+
+  .card-img-top {
+    height: 206px;
+  }
+}
+
+.c-service-card__title.card-title {
+  font-weight: $card-title-font-weight;
+  color: $card-color;
+}
+
+@include media-breakpoint-up(lg) {
+  .c-service-card {
+    .card-img-top {
+      height: 380px;
+    }
+  }
+}
