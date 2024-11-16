@@ -1,11 +1,13 @@
 # Introduction
 
-This is the frontend built in Next.js for the Zdrava Rutina project. 
+This is the frontend built in Next.js for the Zdrava Rutina project.
 It features:
+
 - an integration with Cloudinary for media storage,
 - TinaCMS for content management,
 - React Bootstrap,
-- Framer Motion animation library 
+- Framer Motion animation library
+- main and dev branches
 
 ## Requirements
 
