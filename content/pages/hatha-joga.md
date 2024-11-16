@@ -1,39 +1,30 @@
 ---
 seo:
   title: Hatha Joga
-
 blocks:
   - bannerImages:
       - src: /uploads/hatha-joga.jpg
         alt: woman doing hatha joga
     _template: banner
   - body: >
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum eum modi
-      magni totam sit, unde qui vel expedita veniam, rem doloribus ipsa eius
-      soluta voluptatum temporibus neque recusandae dolor quam.
-
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum eum modi
-      magni totam sit, unde qui vel expedita veniam, rem doloribus ipsa eius
-      soluta voluptatum temporibus neque recusandae dolor quam.
+      ### Tečaji joge za vse stopnje
 
 
-      ### Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis,
-      sunt!
+      Moji tečaji joge so namenjeni vsem, ne glede na raven izkušenj ali telesne
+      pripravljenosti. Poudarek je na individualnem pristopu, kjer vsak
+      udeleženec sledi svojemu ritmu in napredku. Joga je več kot le fizična
+      vadba – je celostna praksa, ki povezuje telo, um in dih, ter ti omogoča,
+      da se povežeš s samim seboj in se osvobodiš stresa vsakdanjega življenja.
 
 
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Non reiciendis
-      aut rerum aliquam molestias necessitatibus atque repudiandae. Pariatur
-      perspiciatis molestiae nobis obcaecati quisquam nam dolore rerum
-      repellendus. Voluptates, quas dicta! Voluptatem alias debitis dignissimos
-      molestiae.
+      ### Prednosti joge
 
-      \- Lorem.- roasters
 
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Non reiciendis
-      aut rerum aliquam molestias necessitatibus atque repudiandae. Pariatur
-      perspiciatis molestiae nobis obcaecati quisquam nam dolore rerum
-      repellendus. Voluptates, quas dicta! Voluptatem alias debitis dignissimos
-      molestiae.
+      Joga prinaša številne koristi za tvoje telo in um. Redna praksa izboljšuje
+      gibljivost, moč in ravnotežje, hkrati pa zmanjšuje stres in tesnobo. Z
+      vadbo joge se boš naučil pravilno dihati, kar ti bo pomagalo ohranjati
+      umirjenost tudi v stresnih situacijah. Poleg tega joga pomaga izboljšati
+      držo, povečati koncentracijo in vzpostaviti globlji stik s svojim telesom.
     _template: content
   - videoTitle: Sloni
     showControls: true
@@ -42,17 +33,24 @@ blocks:
     autoPlay: false
     _template: video
   - body: >
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Non reiciendis
-      aut rerum aliquam molestias necessitatibus atque repudiandae. Pariatur
-      perspiciatis molestiae nobis obcaecati quisquam nam dolore rerum
-      repellendus. Voluptates, quas dicta! Voluptatem alias debitis dignissimos
-      molestiae.
+      ### Prilagojeni programi joge
 
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Non reiciendis
-      aut rerum aliquam molestias necessitatibus atque repudiandae. Pariatur
-      perspiciatis molestiae nobis obcaecati quisquam nam dolore rerum
-      repellendus. Voluptates, quas dicta! Voluptatem alias debitis dignissimos
-      molestiae.
+
+      Na tečajih prilagajam vadbo glede na potrebe posameznika, pri čemer
+      upoštevam telesne omejitve, morebitne poškodbe in cilje. Vsakdo je
+      dobrodošel, ne glede na starost ali fizično pripravljenost. Moj cilj je
+      ustvariti podporno in sproščeno okolje, kjer lahko vsakdo najde svoje
+      mesto in napreduje v svojem tempu.
+
+
+      ### Joga kot pot do ravnovesja
+
+
+      Joga je odlična priložnost, da si vzameš čas zase, se povežeš s svojim
+      notranjim jazom in vzpostaviš ravnovesje med telesom in umom. Skupaj bomo
+      gradili na tvoji fizični in duševni moči, ter ustvarili prakso, ki te bo
+      podpirala na vseh ravneh – tako v vsakdanjem življenju kot na tvoji poti k
+      notranjemu miru in dobremu počutju.
     _template: content
   - images:
       - src: >-

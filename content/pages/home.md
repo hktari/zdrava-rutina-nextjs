@@ -4,8 +4,6 @@ seo:
 blocks:
   - fullScreen: true
     bannerImages:
-      - src: /uploads/hatha-joga.jpg
-        alt: woman doing hatha joga
       - src: /uploads/sea-bend-backward.jpeg
         alt: womand sea bend backwards
     _template: banner
@@ -61,7 +59,8 @@ blocks:
       officiis ipsa deleniti, tempore itaque dolorem ad sit aut provident
       officia.
     avatar:
-      src: /uploads/avatar.jpg
+      src: >-
+        https://res.cloudinary.com/div038xr5/image/upload/v1726301633/zdrava-rutina/zdrava-rutina-portrait_arvjsg.jpg
       alt: avatar
     _template: about
   - title: Storitve
@@ -70,30 +69,30 @@ blocks:
     items:
       - title: Skupinske Meditacije
         link: /skupinske-meditacije
-        description: Opis storitve skupinskih meditacij
+        description: Sprostitvene tehnike za notranji mir in zmanjšanje stresa
         image:
           src: /uploads/meditation-group.jpg
           alt: Meditation
       - title: Osebno Trenerstvo
         link: /osebno-trenerstvo
-        description: Opis storitve osebno trenerstvo
+        description: Prilagojeni vadbeni programi za dosego individualnih ciljev
         image:
           src: /uploads/personal-trainer.jpg
           alt: personal trainer female
       - title: Hatha Joga
         link: /hatha-joga
-        description: Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.
+        description: Uravnotežena vadba za krepitev telesa in umiritev uma
         image:
           src: /uploads/hatha-joga.jpg
           alt: Hatha Joga
       - title: Masaže
-        link: /massages
-        description: Vestibulum ante ipsum primis in faucibus orci luctus et ultrices.
+        link: /masaze
+        description: 'Sproščanje mišic, lajšanje bolečin in izboljšanje počutja'
         image:
           src: /uploads/massage.jpg
           alt: Massage
     _template: services
-  - title: Kontaktirajte nas
+  - title: Kontaktirajte me
     contactItems:
       email: hi@zdrava-rutina.com
       telephone: '+38641222333'

@@ -25,9 +25,12 @@ export default async function Layout({
 
   return (
     <LayoutProvider globalSettings={globalData.global} pageData={rawPageData}>
-      <Header nav={nav} title={title} isHomePage={isHomePage} />
-      <main className={""}>{children}</main>
-      <Footer />
+  
+      <div className="layout-container">
+        <Header nav={nav} title={title} isHomePage={isHomePage} />
+        <main className={""}>{children}</main>
+        <Footer />
+      </div>
     </LayoutProvider>
   );
 }
