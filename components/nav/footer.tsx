@@ -1,11 +1,6 @@
-"use client";
 import React from "react";
-import { useLayout } from "../layout/layout-context";
-import Impresum from "../terms/impresum";
 
 export default function Footer() {
-  const { theme, globalSettings, pageData } = useLayout();
-  const footer = globalSettings?.footer;
 
   return (
     <footer className="bg-secondary text-primary px-4 py-3 text-center">
