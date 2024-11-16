@@ -60,7 +60,7 @@ blocks:
       officia.
     avatar:
       src: >-
-        https://res.cloudinary.com/div038xr5/image/upload/v1726301633/zdrava-rutina/zdrava-rutina-portrait_arvjsg.jpg
+        https://res.cloudinary.com/div038xr5/image/upload/v1716534454/zdrava-rutina/daviddoe_strapi_ssyckh.jpg
       alt: avatar
     _template: about
   - title: Storitve
