@@ -2656,12 +2656,10 @@
     typescript "^5.6.2"
     zod "^3.23.8"
 
-"@tinacms/auth@^1.0.9":
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/@tinacms/auth/-/auth-1.0.9.tgz#7b3948a511954ea785a422b65428fcf78d133885"
-  integrity sha512-0ACF/sDqGE91B0qeMAVJuMCckPcDec8teG8ziRHKIjfRD006NEMB1yM0feXxHXpSOCV92vs+s5+KDwynTJKhaA==
-  dependencies:
-    fetch-ponyfill "^7.1.0"
+"@tinacms/auth@^1.0.10":
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/@tinacms/auth/-/auth-1.0.10.tgz#e3ce1c4d367e38cee98fe4fb335c513c1f27cccb"
+  integrity sha512-1ca+qOoxUcGSRAjlPaJZtdepmAlWYf7Xgse+qYSYQQ3ZFsjW2NTRiVfF3nIq2Cx0nl7Vri3Pfx5SNCAQetqvbQ==
 
 "@tinacms/cli@^1.6.10":
   version "1.6.10"
